@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>xyr的小站</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-10-29T00:33:42.108Z</updated>
+  <updated>2017-10-31T12:12:11.815Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C语言快排</title>
+    <link href="http://yoursite.com/2017/10/31/%E5%BF%AB%E6%8E%92/"/>
+    <id>http://yoursite.com/2017/10/31/快排/</id>
+    <published>2017-10-31T12:06:08.130Z</published>
+    <updated>2017-10-31T12:12:11.815Z</updated>
+    
+    <content type="html"><![CDATA[<p>date: 2017-10-31<br>今天写了我的第一个快排（C）不多bb代码如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;stdio.h&gt;</span></div><div class="line"><span class="comment">#include&lt;string.h&gt;</span></div><div class="line">int a[10000000];</div><div class="line">void quick(int start,int end);</div><div class="line">int getkey(int low,int high);</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    int i,n;</div><div class="line">    scanf(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">for</span>(i=0;i&lt;n;i++)</div><div class="line">        scanf(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line"></div><div class="line">    quick(0,n-1);</div><div class="line">    <span class="keyword">for</span>(i=0;i&lt;n;i++)</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,a[i]);</div><div class="line"></div><div class="line">    <span class="built_in">return</span> 0;</div><div class="line">&#125;</div><div class="line">void quick(int start,int end)</div><div class="line">&#123;</div><div class="line">    int lastkey;</div><div class="line">    <span class="keyword">if</span>(start&lt;end)</div><div class="line">    &#123;</div><div class="line">        lastkey=getkey(start,end);</div><div class="line">        quick(start,lastkey-1);</div><div class="line">        quick(lastkey+1,end);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">int getkey(int low,int high)</div><div class="line">&#123;</div><div class="line">    int key;</div><div class="line">    key=a[low];</div><div class="line">    <span class="keyword">while</span>(low&lt;high)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">while</span>(low&lt;high&amp;&amp;a[high]&gt;=key)</div><div class="line">            high--;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(low&lt;high)</div><div class="line">            a[low++]=a[high];</div><div class="line"></div><div class="line">        <span class="keyword">while</span>(low&lt;high&amp;&amp;a[low]&lt;=key)</div><div class="line">            low++;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(low&lt;high)</div><div class="line">            a[high--]=a[low];</div><div class="line">    &#125;</div><div class="line">            a[low]=key;</div><div class="line">        <span class="built_in">return</span> low;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>emmm其实我还没完全搞懂原理，先写个博把位置占了</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;date: 2017-10-31&lt;br&gt;今天写了我的第一个快排（C）不多bb代码如下：&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title></title>

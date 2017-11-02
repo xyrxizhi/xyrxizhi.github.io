@@ -1090,7 +1090,22 @@
 
 
   <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
-
+  <div id="container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: '33180558', // 可选。默认为 location.href
+  owner: 'xyrxizhi',
+  repo: 'xyrxizhi.github.io',
+  oauth: {
+    client_id: '762d38c224dcc0d80d7b
+',
+    client_secret: 'a0ae59dd9ecc49bce10ed6b12056d871b6fde8e1',
+  },
+})
+gitment.render('container')
+</script>
 
 
   

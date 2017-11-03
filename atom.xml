@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-03T09:46:23.989Z</updated>
+  <updated>2017-11-03T15:24:16.819Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数学常识</title>
+    <link href="http://yoursite.com/2017/11/03/%E6%95%B0%E5%AD%A6%E5%B8%B8%E8%AF%86/"/>
+    <id>http://yoursite.com/2017/11/03/数学常识/</id>
+    <published>2017-11-03T14:34:50.000Z</published>
+    <updated>2017-11-03T15:24:16.819Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>最小公倍数求法：<br> 假设A与B的最小公倍数是X，最大公因数是Y。则有X=A*B/Y；<br> 且一串数字Xn的最小公倍数为X1与X2和最小公倍数和X3的最小公倍数以此类推。</li><li>最大公因数求法：辗转相除法<br> 设两数为a、b(a≥b)，求a和b最大公因数的步骤如下：<br> (1)用a除以b；<br> (2)若a%b！=0，可得a=max（b，a%b），b=min（b，a%b）.<pre><code>重复以上步骤直至a%b==0，此时b为最大公因数；![1](数学常识/辗转相除法.png)</code></pre></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;ol&gt;
+&lt;li&gt;最小公倍数求法：&lt;br&gt; 假设A与B的最小公倍数是X，最大公因数是Y。则有X=A*B/Y；&lt;br&gt; 且一串数字Xn的最小公倍数为X1与X2和最小公倍数和X3的最小公倍数以此类推。&lt;/li&gt;
+&lt;li&gt;最大公因数求法：辗转相除法&lt;br&gt; 设两数为a、b(a≥b)，求
+      
+    
+    </summary>
+    
+    
+      <category term="-ACM -数学常识" scheme="http://yoursite.com/tags/ACM-%E6%95%B0%E5%AD%A6%E5%B8%B8%E8%AF%86/"/>
+    
+  </entry>
   
   <entry>
     <title>ACM常见陷阱</title>
@@ -35,9 +60,9 @@
     </summary>
     
     
-      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
       <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
+    
+      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   

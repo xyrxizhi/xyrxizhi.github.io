@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-11-12T02:33:54.116Z</updated>
+  <updated>2017-11-17T16:00:53.792Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法</title>
+    <link href="http://yoursite.com/2017/11/17/%E7%AE%97%E6%B3%95/"/>
+    <id>http://yoursite.com/2017/11/17/算法/</id>
+    <published>2017-11-17T15:55:36.000Z</published>
+    <updated>2017-11-17T16:00:53.792Z</updated>
+    
+    <content type="html"><![CDATA[<p>1.弗洛伊德求最短路：<br>例题：hdu1874<br><img src="/2017/11/17/算法/弗洛伊德应用.jpg" alt="1"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1.弗洛伊德求最短路：&lt;br&gt;例题：hdu1874&lt;br&gt;&lt;img src=&quot;/2017/11/17/算法/弗洛伊德应用.jpg&quot; alt=&quot;1&quot;&gt;&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
+    
+      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>数学常识</title>

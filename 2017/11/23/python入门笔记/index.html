@@ -89,10 +89,12 @@
 <meta property="og:site_name" content="入门级菜鸡的自虐笔记">
 <meta property="og:description" content="Python笔记Python用缩进定义语句块变量    1.不用声明    2.空值为none 0不是空值    3.变量本身不限定类型    4.Python没有机制保证某变量不被改变    5.运算/的结果一定是浮点型，//结果为整数    6.支持中文字符注释 #单行注释 ‘’’多行注释’’’ 输入输出    输出print(‘‘)        1.支持多个字符串输出，用’,’隔开">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-22T16:43:14.534Z">
+<meta property="og:image" content="http://yoursite.com/2017/11/23/python入门笔记/格式化输出.jpg">
+<meta property="og:updated_time" content="2017-11-22T16:45:06.538Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python入门笔记">
 <meta name="twitter:description" content="Python笔记Python用缩进定义语句块变量    1.不用声明    2.空值为none 0不是空值    3.变量本身不限定类型    4.Python没有机制保证某变量不被改变    5.运算/的结果一定是浮点型，//结果为整数    6.支持中文字符注释 #单行注释 ‘’’多行注释’’’ 输入输出    输出print(‘‘)        1.支持多个字符串输出，用’,’隔开">
+<meta name="twitter:image" content="http://yoursite.com/2017/11/23/python入门笔记/格式化输出.jpg">
 
 
 
@@ -336,13 +338,9 @@
 <pre><code>#单行注释
 ‘’’多行注释’’’
 </code></pre><p>输入输出<br>    输出print(‘<strong><em>‘)<br>        1.支持多个字符串输出，用’,’隔开<br>        2.print输出时遇到字符串间的’,’会留出空格<br>        3.’</em></strong>‘后可以接<em>a意思为吧相应字符串输出a次<br>        4.字符串前加r例如r’**</em>‘字符串内部不转义<br>        a= input(<em>*</em>)<br>        5.&gt;&gt;&gt; print(‘’’line1<br>        … line2<br>        … line3’’’)<br>        line1<br>        line2<br>        line3<br>        支持内部用’’’…’’’表示多行<br>        写成py后为<br>        print(‘’’line1<br>        line2<br>        line3’’’)<br>        6.格式化输出通过%实现</p>
-<pre><code>    &gt;&gt;&gt; &apos;Hi, %s, you have $%d.&apos; % (&apos;Michael&apos;, 1000000)
-    %s会把所有类型转成字符串类型
-    ![1](python入门笔记/格式化输出.jpg)
-输入
-    1.***为执行时会显示的语句a为输入的字符串
-    2.输入数字可以用a=int(a)进行类型转换
-</code></pre><p>选择结构<br>    if 表达式1: 语句1<br>    else  if 表达式2: 语句2<br>    else :语句3<br>循环控制<br>    for I in range(n):<br>        循环体<br>    while 条件表达式:<br>        循环体<br>list类型(列表类似于一种可变长的C语言数组)<br>    a=[‘zcs’,123,214,p,]<br>    p=<a href="注意list括号为[]">1,2</a><br>    1.可以随意增强元素，读取元素方式与数组类似<br>    2.通过len()函数可以获得长度<br>    3.可以通过维数-1～-4访问列表倒数1到4元素<br>    4.通过x.insert(n,m)可以在位置n插入元素m<br>    5.a.remove()根据引用类型删除一个指定的元素<br>    6.列表内元素可以为不同类型(包括list类型)<br>    7.常用操作a.append()    a.sort()a.pop()<br>tuple类型(当序列声明括号为()是得到的为tuple类型)<br>    1.tuple声明后不能改变元素，可以改变相对应的值<br>运算符<br>    1.与或非and or not<br>    2.幂运算 **<br>    3.不等于 &lt;&gt; or !=<br>的函数定义<br>    def 函数名(参数列表):<br>        函数<br>查找异常<br>        try:<br>            捕捉异常的代码范围<br>        except Exception as e:<br>            print(e)<br>        else:<br>            没有捕捉到异常<br>        Finally:<br>            始终执行这段代码<br>标准库的文件处理<br>    open(“文件路径”，””)<br>    第二个参数为r，w或+，表示程序权限为只读，只写或读写</p>
+<pre><code>&gt;&gt;&gt; &apos;Hi, %s, you have $%d.&apos; % (&apos;Michael&apos;, 1000000)
+%s会把所有类型转成字符串类型
+</code></pre><p><img src="/2017/11/23/python入门笔记/格式化输出.jpg" alt="1"><br>    输入<br>        1.<strong>*为执行时会显示的语句a为输入的字符串<br>        2.输入数字可以用a=int(a)进行类型转换<br>选择结构<br>    if 表达式1: 语句1<br>    else  if 表达式2: 语句2<br>    else :语句3<br>循环控制<br>    for I in range(n):<br>        循环体<br>    while 条件表达式:<br>        循环体<br>list类型(列表类似于一种可变长的C语言数组)<br>    a=[‘zcs’,123,214,p,]<br>    p=<a href="注意list括号为[]">1,2</a><br>    1.可以随意增强元素，读取元素方式与数组类似<br>    2.通过len()函数可以获得长度<br>    3.可以通过维数-1～-4访问列表倒数1到4元素<br>    4.通过x.insert(n,m)可以在位置n插入元素m<br>    5.a.remove()根据引用类型删除一个指定的元素<br>    6.列表内元素可以为不同类型(包括list类型)<br>    7.常用操作a.append()    a.sort()a.pop()<br>tuple类型(当序列声明括号为()是得到的为tuple类型)<br>    1.tuple声明后不能改变元素，可以改变相对应的值<br>运算符<br>    1.与或非and or not<br>    2.幂运算 </strong><br>    3.不等于 &lt;&gt; or !=<br>的函数定义<br>    def 函数名(参数列表):<br>        函数<br>查找异常<br>        try:<br>            捕捉异常的代码范围<br>        except Exception as e:<br>            print(e)<br>        else:<br>            没有捕捉到异常<br>        Finally:<br>            始终执行这段代码<br>标准库的文件处理<br>    open(“文件路径”，””)<br>    第二个参数为r，w或+，表示程序权限为只读，只写或读写</p>
 
       
     </div>

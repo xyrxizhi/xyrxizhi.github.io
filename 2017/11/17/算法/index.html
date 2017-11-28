@@ -81,19 +81,19 @@
 
 
 
-<meta name="description" content="1.弗洛伊德求最短路：例题：hdu1874">
+<meta name="description" content="1.弗洛伊德求最短路：例题：hdu1874 2.快速幂例题：hdu汉诺塔V原理：x^2n = x^n  x^n;x^2n+1 = x^n  x^n * x下面是ans为a^b的模版123456789int ans = 1;//a=a%c; while(b&amp;gt;0) &amp;#123; 	if(b % 2 == 1)  	ans = (ans * a) //% c;最后两次循环为2/2=1;1/2=0">
 <meta name="keywords" content="ACM,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法">
 <meta property="og:url" content="http://yoursite.com/2017/11/17/算法/index.html">
 <meta property="og:site_name" content="入门级菜鸡的自虐笔记">
-<meta property="og:description" content="1.弗洛伊德求最短路：例题：hdu1874">
+<meta property="og:description" content="1.弗洛伊德求最短路：例题：hdu1874 2.快速幂例题：hdu汉诺塔V原理：x^2n = x^n  x^n;x^2n+1 = x^n  x^n * x下面是ans为a^b的模版123456789int ans = 1;//a=a%c; while(b&amp;gt;0) &amp;#123; 	if(b % 2 == 1)  	ans = (ans * a) //% c;最后两次循环为2/2=1;1/2=0">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2017/11/17/算法/弗洛伊德应用.jpg">
-<meta property="og:updated_time" content="2017-11-17T16:00:53.792Z">
+<meta property="og:updated_time" content="2017-11-24T13:44:46.128Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法">
-<meta name="twitter:description" content="1.弗洛伊德求最短路：例题：hdu1874">
+<meta name="twitter:description" content="1.弗洛伊德求最短路：例题：hdu1874 2.快速幂例题：hdu汉诺塔V原理：x^2n = x^n  x^n;x^2n+1 = x^n  x^n * x下面是ans为a^b的模版123456789int ans = 1;//a=a%c; while(b&amp;gt;0) &amp;#123; 	if(b % 2 == 1)  	ans = (ans * a) //% c;最后两次循环为2/2=1;1/2=0">
 <meta name="twitter:image" content="http://yoursite.com/2017/11/17/算法/弗洛伊德应用.jpg">
 
 
@@ -335,6 +335,8 @@
 
       
         <p>1.弗洛伊德求最短路：<br>例题：hdu1874<br><img src="/2017/11/17/算法/弗洛伊德应用.jpg" alt="1"></p>
+<p>2.快速幂<br>例题：hdu汉诺塔V<br>原理：x^2n = x^n <em> x^n;x^2n+1 = x^n </em> x^n * x<br>下面是ans为a^b的模版<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">int ans = 1;</div><div class="line">//a=a%c; </div><div class="line"><span class="keyword">while</span>(b&gt;0) </div><div class="line">&#123; </div><div class="line">	<span class="keyword">if</span>(b % 2 == 1)  </div><div class="line">	ans = (ans * a) //% c;最后两次循环为2/2=1;1/2=0 </div><div class="line">	b = b/2;  </div><div class="line">	a = (a * a) //% c;  </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>扩展应用快速幂求膜。</p>
 
       
     </div>

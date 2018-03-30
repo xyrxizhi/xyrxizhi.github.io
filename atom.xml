@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-01-10T15:40:35.078Z</updated>
+  <updated>2018-03-30T14:01:44.505Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gym - 101755C</title>
+    <link href="http://yoursite.com/2018/03/30/Gym-101755C/"/>
+    <id>http://yoursite.com/2018/03/30/Gym-101755C/</id>
+    <published>2018-03-30T13:31:23.000Z</published>
+    <updated>2018-03-30T14:01:44.505Z</updated>
+    
+    <content type="html"><![CDATA[<p>Problem C. Third-Party Software</p><p>Time limit: 2 seconds<br>Memory limit: 256 megabytes<br>Pavel is developing a game. To do that, he needs functions available in a third-party library too famous to be called. It is known that the function i first appeared in version ai and existed until version bi , and starting from the version bi + 1, it is absent in this library.<br>The library is not free and Pavel needs all the functions. Which minimal number of versions he need to purchase to be able to use all the functions?</p><p>Input<br>The first line contains a single integer n (1 ≤ n ≤ 200000) — the number of the functions.<br>Each of the next n lines contains two integers ai and bi (1 ≤ ai ≤ bi ≤ 109<br>) — the interval of library<br>versions where function i was available.</p><p>Output<br>In the first line output a single integer k — the minimal number of library versions need to be purchased<br>to unlock all functions.<br>In the second line output k distinct integers — the numbers of versions need to be purchased.<br>If there are several possible answers, output any of them.</p><p>Example<br>standard input<br>5<br>2 4<br>1 3<br>2 3<br>3 6<br>4 5<br>standard output<br>2<br>3 4</p><p>题意很简单，就是一种东西有很多个版本和很多个功能。但是每个功能仅存在于连续的几个版本中。<br>现在给出n个功能的存在情况，问至少要买那几个版本才能实现所有功能。</p><p>先按照各个功能的r从小到大排序，同时把l作为第二标准从小到大排序。这样买版本r就可以买到尽可能多的功能。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">struct U&#123;</div><div class="line">    int l,r;</div><div class="line">    bool operator &lt; (const U&amp;x)const&#123;</div><div class="line">        <span class="keyword">if</span>(r==x.r)<span class="built_in">return</span> l&lt;x.l;</div><div class="line">        <span class="built_in">return</span> r&lt;x.r;</div><div class="line">    &#125;</div><div class="line">&#125;a[200020];</div><div class="line">vector &lt;int&gt; ans;</div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    int n;</div><div class="line">    scanf(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">        scanf(<span class="string">"%d%d"</span>,&amp;a[i].l,&amp;a[i].r);</div><div class="line">    &#125;</div><div class="line">    int maxx=-1;</div><div class="line">    sort(a,a+n);</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(a[i].l&gt;maxx)&#123;</div><div class="line">        /*排序后有，若li&gt;购买到的r的最大值。证明已购买的版本不能覆盖功能i。所以购买i并更新最大值*/</div><div class="line">            ans.push_back(a[i].r);</div><div class="line">            maxx=max(maxx,a[i].r);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans.size());</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;ans.size();i++)&#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,ans[i]);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Problem C. Third-Party Software&lt;/p&gt;
+&lt;p&gt;Time limit: 2 seconds&lt;br&gt;Memory limit: 256 megabytes&lt;br&gt;Pavel is developing a game. To do that, he
+      
+    
+    </summary>
+    
+    
+      <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
+    
+      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>python入门笔记</title>
@@ -186,29 +212,6 @@
       
       
         &lt;p&gt;今天，我参加了全球未来科技大会的人工智能论坛。一开始，我对人工智能的概念只是一知半解。而且根本分不清什么是智能和自动化。&lt;br&gt;&lt;img src=&quot;/2017/11/02/未来科技大会/2.jpg&quot; alt=&quot;1&quot;&gt;&lt;br&gt;在这次论坛中提出了两个我认为比较对我来说比较新颖的
-      
-    
-    </summary>
-    
-    
-      <category term="杂谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%B0%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记第一次跷课</title>
-    <link href="http://yoursite.com/2017/11/01/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%B7%B7%E8%AF%BE/"/>
-    <id>http://yoursite.com/2017/11/01/记第一次跷课/</id>
-    <published>2017-11-01T14:42:10.000Z</published>
-    <updated>2017-11-02T11:07:17.698Z</updated>
-    
-    <content type="html"><![CDATA[<p>不知不觉，我走入GDUT的大门并开始学业已奖金有两个月。从开学第一天开始就有很多人跟我讲过，大学生活充满了选择。做了什么的选择决定了四年后你会成为什么样的人。<br>开学后我也的的确确面临着各种各样的选择。（为了加入acm协会放弃面试原来很感兴趣的社团；进入蛋协后，进入两个技术性社团意味着我再也没有精力顾及其他兴趣社团；为了早点熟悉C语言，放弃了许多形形色色的活动）这些都是我会毫不犹豫做出的决定。而明天，我将面临我大学生涯中第一次纠结的选择。<br>明天早上在琶洲举办的全球未来科技大会中有一场关于人工智能的论坛，我真很想参加。<br>但是这个论坛和一节高等数学课时间冲突了，而且那节课是一节比较重要的内容。一开始我一直在由于是否要浪费这次难得的机会，最后在同行的建议下，我决定翘掉这一节课。既然我作出了这个选择，我就要为此负责：<br>1.冒着日常分被扣除的风险；<br>2.需要自己自学隐函数部分。<br>但我想我不会后悔这次决定，我相信这是值得的。<br>好好享受明天的论坛，全当开眼看世界吧。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;不知不觉，我走入GDUT的大门并开始学业已奖金有两个月。从开学第一天开始就有很多人跟我讲过，大学生活充满了选择。做了什么的选择决定了四年后你会成为什么样的人。&lt;br&gt;开学后我也的的确确面临着各种各样的选择。（为了加入acm协会放弃面试原来很感兴趣的社团；进入蛋协后，进入两个
       
     
     </summary>

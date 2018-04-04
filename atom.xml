@@ -205,31 +205,6 @@
   </entry>
   
   <entry>
-    <title>ACM常见陷阱</title>
-    <link href="http://yoursite.com/2017/11/03/ACM%E5%B8%B8%E8%A7%81%E9%99%B7%E9%98%B1/"/>
-    <id>http://yoursite.com/2017/11/03/ACM常见陷阱/</id>
-    <published>2017-11-03T09:24:10.000Z</published>
-    <updated>2017-11-03T09:46:23.989Z</updated>
-    
-    <content type="html"><![CDATA[<p>1.scanf输入陷阱//例题hdu2024<br>c中利用scanf()函数输入字符串，在按下回车后’\n’字符是被存储在了缓存区的，如果下一次继续读入字符这个换行符可能会产生影响。<br>一般而言，这个换行符不会带来影响因为在下一个scanf函数会自动跳过空白字符。但是当下一次读取的是%c字符或者用gets等检测每一个字符的输入函数输入时，第二个输入函数就会被\n直接占用并跳到下一步。<br>解决方案：在scanf函数后加一个getchar()函数；先一步把\n读取。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;1.scanf输入陷阱//例题hdu2024&lt;br&gt;c中利用scanf()函数输入字符串，在按下回车后’\n’字符是被存储在了缓存区的，如果下一次继续读入字符这个换行符可能会产生影响。&lt;br&gt;一般而言，这个换行符不会带来影响因为在下一个scanf函数会自动跳过空白字符。但是
-      
-    
-    </summary>
-    
-    
-      <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
-    
-      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
     <title>未来科技大会</title>
     <link href="http://yoursite.com/2017/11/02/%E6%9C%AA%E6%9D%A5%E7%A7%91%E6%8A%80%E5%A4%A7%E4%BC%9A/"/>
     <id>http://yoursite.com/2017/11/02/未来科技大会/</id>

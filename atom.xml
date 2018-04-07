@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-04T17:52:16.195Z</updated>
+  <updated>2018-04-07T16:31:03.629Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,59 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>蓝桥杯与天梯赛总结</title>
+    <link href="http://yoursite.com/2018/04/07/%E8%93%9D%E6%A1%A5%E6%9D%AF%E4%B8%8E%E5%A4%A9%E6%A2%AF%E8%B5%9B%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/04/07/蓝桥杯与天梯赛总结/</id>
+    <published>2018-04-07T03:40:40.000Z</published>
+    <updated>2018-04-07T16:31:03.629Z</updated>
+    
+    <content type="html"><![CDATA[<p>上星期我们连续打了天梯赛和蓝桥杯，发现了自己很多不足。<br>天梯赛：1.码速不快，导致有两道已经读懂题意的题目并没有时间尝试。2.对一些常见封装函数不熟悉，因为搞错了strcmp（）的返回值导致没有通过最后开的一题。3.不熟悉赛制，在有部分分的比赛中，我没有尝试去获得部分分。<br>蓝桥杯：1.没有背熟常见头文件，在没有cb辅助补全的情况下，一度心态爆炸。2.看题不谨慎，把全球变暖的问题看反了，而且恰好样例能通过。直到赛后和同学讨论才知道错误。<br>最近在补题的时候已经发现，因为知识面不够，在补题的时候需要花费大量的时间才能理解代码逻辑。所以在以后，做题补题的同时要加紧对知识点的学习。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;上星期我们连续打了天梯赛和蓝桥杯，发现了自己很多不足。&lt;br&gt;天梯赛：1.码速不快，导致有两道已经读懂题意的题目并没有时间尝试。2.对一些常见封装函数不熟悉，因为搞错了strcmp（）的返回值导致没有通过最后开的一题。3.不熟悉赛制，在有部分分的比赛中，我没有尝试去获得部分
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>A - Rikka with Candies HDU - 6085</title>
+    <link href="http://yoursite.com/2018/04/07/HDU-6085/"/>
+    <id>http://yoursite.com/2018/04/07/HDU-6085/</id>
+    <published>2018-04-06T17:40:17.000Z</published>
+    <updated>2018-04-06T17:49:04.431Z</updated>
+    
+    <content type="html"><![CDATA[<p>As we know, Rikka is poor at math. Yuta is worrying about this situation, so he gives Rikka some math tasks to practice. There is one of them: </p><p>There are n children and m kinds of candies. The ith child has Ai dollars and the unit price of the ith kind of candy is Bi. The amount of each kind is infinity. </p><p>Each child has his favorite candy, so he will buy this kind of candies as much as possible and will not buy any candies of other kinds. For example, if this child has 10 dollars and the unit price of his favorite candy is 4 dollars, then he will buy two candies and go home with 2 dollars left. </p><p>Now Yuta has q queries, each of them gives a number k. For each query, Yuta wants to know the number of the pairs (i,j)(1≤i≤n,1≤j≤m) which satisfies if the ith child’s favorite candy is the jth kind, he will take k dollars home. </p><p>To reduce the difficulty, Rikka just need to calculate the answer modulo 2. </p><p>But It is still too difficult for Rikka. Can you help her?<br>Input<br>The first line contains a number t(1≤t≤5), the number of the testcases. </p><p>For each testcase, the first line contains three numbers n,m,q(1≤n,m,q≤50000). </p><p>The second line contains n numbers Ai(1≤Ai≤50000) and the third line contains m numbers Bi(1≤Bi≤50000). </p><p>Then the fourth line contains q numbers ki(0≤ki&lt;maxBi) , which describes the queries. </p><p>It is guaranteed that Ai≠Aj,Bi≠Bj for all i≠j.<br>Output<br>For each query, print a single line with a single 01 digit – the answer.<br>Sample Input<br>1<br>5 5 5<br>1 2 3 4 5<br>1 2 3 4 5<br>0 1 2 3 4<br>Sample Output<br>0<br>0<br>0<br>0<br>1</p><p>题意是给出数组a，b。每次询问输入k。求任意i，j有ai%bj=k的数量。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;As we know, Rikka is poor at math. Yuta is worrying about this situation, so he gives Rikka some math tasks to practice. There is one of 
+      
+    
+    </summary>
+    
+    
+      <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
+    
+      <category term="Codeforces" scheme="http://yoursite.com/tags/Codeforces/"/>
+    
+      <category term="C++应用" scheme="http://yoursite.com/tags/C-%E5%BA%94%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Educational Codeforces Round 41 C</title>
     <link href="http://yoursite.com/2018/04/05/Educational%20Codeforces%20Round%2041%20C/"/>
     <id>http://yoursite.com/2018/04/05/Educational Codeforces Round 41 C/</id>
     <published>2018-04-04T17:10:10.000Z</published>
-    <updated>2018-04-04T17:52:16.195Z</updated>
+    <updated>2018-04-06T17:43:44.966Z</updated>
     
     <content type="html"><![CDATA[<p>C. Chessboard<br>time limit per test1 second<br>memory limit per test256 megabytes<br>inputstandard input<br>outputstandard output<br>Magnus decided to play a classic chess game. Though what he saw in his locker shocked him! His favourite chessboard got broken into 4 pieces, each of size n by n, n is always odd. And what’s even worse, some squares were of wrong color. j-th square of the i-th row of k-th piece of the board has color ak, i, j; 1 being black and 0 being white.</p><p>Now Magnus wants to change color of some squares in such a way that he recolors minimum number of squares and obtained pieces form a valid chessboard. Every square has its color different to each of the neightbouring by side squares in a valid board. Its size should be 2n by 2n. You are allowed to move pieces but not allowed to rotate or flip them.</p><p>Input<br>The first line contains odd integer n (1 ≤ n ≤ 100) — the size of all pieces of the board.</p><p>Then 4 segments follow, each describes one piece of the board. Each consists of n lines of n characters; j-th one of i-th line is equal to 1 if the square is black initially and 0 otherwise. Segments are separated by an empty line.</p><p>Output<br>Print one number — minimum number of squares Magnus should recolor to be able to obtain a valid chessboard.<br>Examples<br>input<br>1<br>0</p><p>0</p><p>1</p><p>0<br>output<br>1<br>input<br>3<br>101<br>010<br>101</p><p>101<br>000<br>101</p><p>010<br>101<br>011</p><p>010<br>101<br>010<br>output<br>2<br>题意很简单，有4块n*n棋盘。其中有些棋盘的配色不标准，问至少需要重新染色多少块才能使它们组成成一块完整的2n*2n的棋盘。（n为奇数）</p><p>数据不算大，很容易想到这种暴力模拟的思路，但是当时做的时候没想到如何把每种排列情况全列出来。赛后看榜单上的代码才知道了有一个叫next_permutation()的全排列函数。<br>            next_permutation()会取得[first,last)所标示之序列的下一个排列组合，如果没有下一个排列组合，便返回false;否则返回true。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></div><div class="line"></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">const int INF = 0x3f3f3f3f;</div><div class="line"></div><div class="line">char <span class="keyword">in</span>[4][105][105];</div><div class="line">char cur[205][205];</div><div class="line"></div><div class="line">int now[4];</div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">int n,minn=1e9,ans;</div><div class="line">char ch;</div><div class="line">scanf(<span class="string">"%d"</span>, &amp;n);</div><div class="line"></div><div class="line"><span class="keyword">for</span>(int i=0;i&lt;4;i++)</div><div class="line">        <span class="keyword">for</span> (int j=0;j&lt;n;j++)</div><div class="line">            scanf(<span class="string">"%s"</span>,<span class="keyword">in</span>[i][j]);</div><div class="line"></div><div class="line"><span class="keyword">for</span> (int i=0;i&lt;4;i++)now[i]=i;</div><div class="line"></div><div class="line">    <span class="keyword">do</span>&#123;</div><div class="line">        ans=0;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;4;i++)&#123;</div><div class="line">            <span class="keyword">for</span>(int j=0;j&lt;n;j++)&#123;</div><div class="line">                <span class="keyword">for</span>(int k=0;k&lt;n;k++)&#123;</div><div class="line">                    cur[(i/2)*n+j][(i%2)*n+k]=<span class="keyword">in</span>[now[i]][j][k];//拼成新的棋盘</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;2*n;i++)&#123;</div><div class="line">            <span class="keyword">for</span>(int j=0;j&lt;2*n;j++)&#123;</div><div class="line">                <span class="keyword">if</span>((i+j)%2)ch=<span class="string">'0'</span>;//黑白相间的棋盘颜色</div><div class="line">                <span class="keyword">else</span> ch=<span class="string">'1'</span>;</div><div class="line">                <span class="keyword">if</span>(ch!=cur[i][j])ans++;//每种情况需要颜色次数</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        minn=min(minn,ans);</div><div class="line"></div><div class="line">    &#125;<span class="keyword">while</span>(next_permutation(now,now+4));//把棋盘摆放顺序全排列，遍历所有摆放情况。</div><div class="line"><span class="built_in">printf</span>(<span class="string">"%d\n"</span>,minn);</div><div class="line"><span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
@@ -37,11 +85,9 @@
     
       <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
     
-      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
-    
       <category term="Codeforces" scheme="http://yoursite.com/tags/Codeforces/"/>
     
-      <category term="库函数" scheme="http://yoursite.com/tags/%E5%BA%93%E5%87%BD%E6%95%B0/"/>
+      <category term="C++应用" scheme="http://yoursite.com/tags/C-%E5%BA%94%E7%94%A8/"/>
     
   </entry>
   
@@ -50,7 +96,7 @@
     <link href="http://yoursite.com/2018/03/30/Gym-101755C/"/>
     <id>http://yoursite.com/2018/03/30/Gym-101755C/</id>
     <published>2018-03-30T13:31:23.000Z</published>
-    <updated>2018-04-04T17:17:43.292Z</updated>
+    <updated>2018-04-06T17:42:25.891Z</updated>
     
     <content type="html"><![CDATA[<p>Problem C. Third-Party Software</p><p>Time limit: 2 seconds<br>Memory limit: 256 megabytes<br>Pavel is developing a game. To do that, he needs functions available in a third-party library too famous to be called. It is known that the function i first appeared in version ai and existed until version bi , and starting from the version bi + 1, it is absent in this library.<br>The library is not free and Pavel needs all the functions. Which minimal number of versions he need to purchase to be able to use all the functions?</p><p>Input<br>The first line contains a single integer n (1 ≤ n ≤ 200000) — the number of the functions.<br>Each of the next n lines contains two integers ai and bi (1 ≤ ai ≤ bi ≤ 109<br>) — the interval of library<br>versions where function i was available.</p><p>Output<br>In the first line output a single integer k — the minimal number of library versions need to be purchased<br>to unlock all functions.<br>In the second line output k distinct integers — the numbers of versions need to be purchased.<br>If there are several possible answers, output any of them.</p><p>Example<br>standard input<br>5<br>2 4<br>1 3<br>2 3<br>3 6<br>4 5<br>standard output<br>2<br>3 4</p><p>题意很简单，就是一种东西有很多个版本和很多个功能。但是每个功能仅存在于连续的几个版本中。<br>现在给出n个功能的存在情况，问至少要买那几个版本才能实现所有功能。</p><p>先按照各个功能的r从小到大排序，同时把l作为第二标准从小到大排序。这样买版本r就可以买到尽可能多的功能。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">struct U&#123;</div><div class="line">    int l,r;</div><div class="line">    bool operator &lt; (const U&amp;x)const&#123;</div><div class="line">        <span class="keyword">if</span>(r==x.r)<span class="built_in">return</span> l&lt;x.l;</div><div class="line">        <span class="built_in">return</span> r&lt;x.r;</div><div class="line">    &#125;</div><div class="line">&#125;a[200020];</div><div class="line">vector &lt;int&gt; ans;</div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    int n;</div><div class="line">    scanf(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">        scanf(<span class="string">"%d%d"</span>,&amp;a[i].l,&amp;a[i].r);</div><div class="line">    &#125;</div><div class="line">    int maxx=-1;</div><div class="line">    sort(a,a+n);</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(a[i].l&gt;maxx)&#123;</div><div class="line">        /*排序后有，若li&gt;购买到的r的最大值。证明已购买的版本不能覆盖功能i。所以购买i并更新最大值*/</div><div class="line">            ans.push_back(a[i].r);</div><div class="line">            maxx=max(maxx,a[i].r);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans.size());</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;ans.size();i++)&#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,ans[i]);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
@@ -66,8 +112,6 @@
     
     
       <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
-    
-      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
     
       <category term="Codeforces" scheme="http://yoursite.com/tags/Codeforces/"/>
     
@@ -102,7 +146,7 @@
     <link href="http://yoursite.com/2017/11/22/2017%E5%93%88%E7%90%86%E5%B7%A5%E5%8D%8E%E4%B8%BA%E6%9D%AFG%E9%A2%98/"/>
     <id>http://yoursite.com/2017/11/22/2017哈理工华为杯G题/</id>
     <published>2017-11-21T16:21:20.000Z</published>
-    <updated>2017-11-22T05:19:08.812Z</updated>
+    <updated>2018-04-06T17:42:27.150Z</updated>
     
     <content type="html"><![CDATA[<p>G.真假小妖 </p><p>Time Limit: 1000 MS Memory Limit: 256000 K </p><p>Total Submit: 1236 (482 users)  Total Accepted: 425 (387 users)  Special Judge: No  </p><p>Description </p><p>风和日丽的一天，涂山小八正在悠哉的晒着太阳。突然，一群小妖涌了进来，一问才知道又是东方平平捉弄她，使了个法术造了一群涂山小妖的盗版。现在分不清真小妖和假小妖了。 </p><p>小八微微一笑，开始有条有理的组织起来鉴别真假。原来涂山小妖都有一个ID数字，这些ID数字都是特别的回文数字。平平不知道此事，造的假小妖的ID数字都不是回文数字。 </p><p>看在小八都这么机智的份上，帮帮她吧？ </p><p>Input<br>   输入数据有多组，每组占一行，输入一个整数n(1≤n≤109)，表示小妖的ID数字。<br>Output </p><p>对于每组数据，如果这个小妖是真小妖的话，输出“yes”，否则输出“no”（输出不包括引号），每组输出占一行。 </p><p>Sample Input<br>12345<br>12321<br>2<br>Sample Output<br>no<br>yes<br>yes </p><p>这题就没什么好讲的了，n(1≤n≤109)意味着如果用字符串储存的话一个ID才9个字符直接暴力枚举行了<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;stdio.h&gt;</span></div><div class="line"><span class="comment">#include&lt;string.h&gt;</span></div><div class="line"><span class="comment">#include&lt;stdlib.h&gt;</span></div><div class="line">char a[1010][1010],b[1010][1010],fanli[1010][1010];</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    int i,n,k=1;</div><div class="line">    char a[20];</div><div class="line">    <span class="keyword">while</span>(~scanf(<span class="string">"%s"</span>,a))</div><div class="line">    &#123;</div><div class="line">        k=1;</div><div class="line">        <span class="keyword">for</span>(i=0,n=strlen(a);i&lt;n-1-i;i++)</div><div class="line">            <span class="keyword">if</span>(a[i]!=a[n-1-i])&#123;k=0;<span class="built_in">break</span>;&#125;</div><div class="line">        <span class="keyword">if</span>(k)<span class="built_in">printf</span>(<span class="string">"yes\n"</span>);</div><div class="line">        <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">"no\n"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p><p>代码大概这样吧，刚打的，源码删了。</p>]]></content>
     
@@ -119,8 +163,6 @@
     
     
       <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
-    
-      <category term="C语言" scheme="http://yoursite.com/tags/C%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
@@ -182,9 +224,9 @@
     <link href="http://yoursite.com/2017/11/03/%E6%95%B0%E5%AD%A6%E5%B8%B8%E8%AF%86/"/>
     <id>http://yoursite.com/2017/11/03/数学常识/</id>
     <published>2017-11-03T14:34:50.000Z</published>
-    <updated>2017-11-12T02:33:54.116Z</updated>
+    <updated>2018-04-04T17:55:59.740Z</updated>
     
-    <content type="html"><![CDATA[<ol><li>最小公倍数求法：<br> 假设A与B的最小公倍数是X，最大公因数是Y。则有X=A*B/Y；<br> 且一串数字Xn的最小公倍数为X1与X2和最小公倍数和X3的最小公倍数以此类推。</li><li>最大公因数求法：辗转相除法<br> 设两数为a、b(a≥b)，求a和b最大公因数的步骤如下：<br> (1)用a除以b；<br> (2)若a%b！=0，可得a=max（b，a%b），b=min(b，a%b).<pre><code>重复以上步骤直至a%b==0，此时b为最大公因数；</code></pre><img src="/2017/11/03/数学常识/辗转相除法.png" alt="1"><br>#2017/11/7更新</li><li>求三角形面积：例题hdu2035<br><img src="/2017/11/03/数学常识/流下了没有技术的眼泪.jpg" alt="流下了没有技术的眼泪"><br> 补充概念叉乘：假如对向量a、b、c满足c=a×b。即有c垂直于a、b所在平面，且|c|=|a|<em>|b|</em>sinθ<br><img src="/2017/11/03/数学常识/叉乘视图.jpg" alt="2"><br> 此时又由高中知识可知SΔ=|a|<em> |b|</em> sinθ，所以两向量叉乘的结果是一条膜为两向量首尾相接后所围成三角形面积的ab所在平面的法向量。同理可用多个三角形拼接的方式求已知顶点坐标的多边形面积。<br> 叉乘坐标运算：已知i(a,b,c)、j(x,y,z)时，<pre><code>   有i×j=(bz-cy,-(az-cx),ay-bx).其中当i、j为平面向量是有c=y=0，此时i×j=(0,az-cx,0)。</code></pre>#2017/11/12更新</li><li>错排：<br> 每人对应一个编号，每人只能抽一次，每个编号只有一个。求每一个人抽到自己编号的情况有多少种？（递推公式D(n) = (n-1) [D(n-2) + D(n-1)]）<br> 设：当有x人时有D(n)种情况，此时第一个人有n-1种情况可以选择。假设第一人选的是编号k，此时k有两种情况<pre><code>（1）选择第一个人的编号，相当于剩下的n-2人重新抽取编号，此时情况为D(n-2)；（2）不选择第一个人的编号，相当于k以第一个人的编号为自己的编号剩下的n-1人重新抽取编号，此时情况为D(n--1)；</code></pre> 综上，对n人有D(n) = (n-1) [D(n-2) + D(n-1)]</li></ol>]]></content>
+    <content type="html"><![CDATA[<ol><li>最小公倍数求法：<br> 假设A与B的最小公倍数是X，最大公因数是Y。则有X=A*B/Y；<br> 且一串数字Xn的最小公倍数为X1与X2和最小公倍数和X3的最小公倍数以此类推。</li><li>最大公因数求法：辗转相除法<br> 设两数为a、b(a≥b)，求a和b最大公因数的步骤如下：<br> (1)用a除以b；<br> (2)若a%b！=0，可得a=max（b，a%b），b=min(b，a%b).<pre><code>重复以上步骤直至a%b==0，此时b为最大公因数；</code></pre><img src="/2017/11/03/数学常识/辗转相除法.png" alt="1"><br>#2017/11/7更新</li><li>求三角形面积：例题hdu2035<br><img src="/2017/11/03/数学常识/流下了没有技术的眼泪.jpg" alt="流下了没有技术的眼泪"><br> 补充概念叉乘：假如对向量a、b、c满足c=a×b。即有c垂直于a、b所在平面，且|c|=|a|*|b|*sinθ<br><img src="/2017/11/03/数学常识/叉乘视图.jpg" alt="2"><br> 此时又由高中知识可知SΔ=|a|* |b|* sinθ，所以两向量叉乘的结果是一条膜为两向量首尾相接后所围成三角形面积的ab所在平面的法向量。同理可用多个三角形拼接的方式求已知顶点坐标的多边形面积。<br> 叉乘坐标运算：已知i(a,b,c)、j(x,y,z)时，<pre><code>   有i×j=(bz-cy,-(az-cx),ay-bx).其中当i、j为平面向量是有c=y=0，此时i×j=(0,az-cx,0)。</code></pre>#2017/11/12更新</li><li>错排：<br> 每人对应一个编号，每人只能抽一次，每个编号只有一个。求每一个人抽到自己编号的情况有多少种？（递推公式D(n) = (n-1) [D(n-2) + D(n-1)]）<br> 设：当有x人时有D(n)种情况，此时第一个人有n-1种情况可以选择。假设第一人选的是编号k，此时k有两种情况<pre><code>（1）选择第一个人的编号，相当于剩下的n-2人重新抽取编号，此时情况为D(n-2)；（2）不选择第一个人的编号，相当于k以第一个人的编号为自己的编号剩下的n-1人重新抽取编号，此时情况为D(n--1)；</code></pre> 综上，对n人有D(n) = (n-1) [D(n-2) + D(n-1)]</li></ol>]]></content>
     
     <summary type="html">
     

@@ -254,6 +254,131 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/11/CodeForces - 962D(优先队列)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xyr">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="入门级菜鸡的自虐笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/11/CodeForces - 962D(优先队列)/" itemprop="url">CodeForces - 962D(优先队列)</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-11T23:50:44+08:00">
+                2018-04-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>D. Merge Equals<br>time limit per test2 seconds<br>memory limit per test256 megabytes<br>inputstandard input<br>outputstandard output<br>You are given an array of positive integers. While there are at least two equal elements, we will perform the following operation. We choose the smallest value x that occurs in the array 2 or more times. Take the first two occurrences of x in this array (the two leftmost occurrences). Remove the left of these two occurrences, and the right one is replaced by the sum of this two values (that is, 2⋅x).</p>
+<p>Determine how the array will look after described operations are performed.</p>
+<p>For example, consider the given array looks like [3,4,1,2,2,1,1]. It will be changed in the following way: [3,4,1,2,2,1,1] → [3,4,2,2,2,1] → [3,4,4,2,1] → [3,8,2,1].<br>If the given array is look like [1,1,3,1,1] it will be changed in the following way: [1,1,3,1,1] → [2,3,1,1] → [2,3,2] → [3,4].</p>
+<p>Input<br>The first line contains a single integer n (2≤n≤150000) — the number of elements in the array.<br>The second line contains a sequence from n elements a1,a2,…,an  — the elements of the array.</p>
+<p>Output<br>In the first line print an integer k — the number of elements in the array after all the performed operations. In the second line print k integers — the elements of the array after all the performed operations.</p>
+<p>Examples<br>input<br>7<br>3 4 1 2 2 1 1<br>output<br>4<br>3 8 2 1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">struct node&#123;</div><div class="line">    long long x,now;</div><div class="line">    bool operator &lt; (const node &amp;a)const&#123;</div><div class="line">        <span class="keyword">if</span>(x==a.x)<span class="built_in">return</span> now&gt;a.now;</div><div class="line">        <span class="built_in">return</span> x&gt;a.x;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">node c[1000010];</div><div class="line"></div><div class="line">priority_queue&lt;node,vector&lt;node&gt;,less&lt;node&gt; &gt;q;</div><div class="line"></div><div class="line">bool cmp(node x,node y)&#123;<span class="built_in">return</span> x.now&lt;y.now;&#125;</div><div class="line"></div><div class="line">int n,now,x,j=0;</div><div class="line">void <span class="function"><span class="title">work</span></span>()&#123;</div><div class="line">    node a=q.top();q.pop();</div><div class="line">    <span class="keyword">while</span>(!q.empty())&#123;</div><div class="line">        node b=q.top();q.pop();</div><div class="line">        <span class="keyword">if</span>(a.x==b.x)&#123;</div><div class="line">            b.x*=2;q.push(b);</div><div class="line">            a=q.top();q.pop();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            c[j++]=a;</div><div class="line">            a=b;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    c[j++]=a;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    //freopen(<span class="string">"123.in"</span>,<span class="string">"r"</span>,stdin);</div><div class="line">    node a;</div><div class="line">    <span class="keyword">while</span>(~scanf(<span class="string">"%d"</span>,&amp;n))&#123;</div><div class="line">        j=0;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">            cin&gt;&gt;x;</div><div class="line">            a.x=x;</div><div class="line">            a.now=i+1;</div><div class="line">            q.push(a);</div><div class="line">        &#125;</div><div class="line">        work();</div><div class="line">        sort(c,c+j,cmp);</div><div class="line">        cout&lt;&lt;j&lt;&lt;endl;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;j;i++)&#123;</div><div class="line">            cout&lt;&lt; c[i].x &lt;&lt; <span class="string">' '</span>;</div><div class="line">        &#125;</div><div class="line">        cout&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/07/蓝桥杯与天梯赛总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1414,126 +1539,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/02/未来科技大会/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xyr">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="入门级菜鸡的自虐笔记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/02/未来科技大会/" itemprop="url">未来科技大会</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-02T18:58:34+08:00">
-                2017-11-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天，我参加了全球未来科技大会的人工智能论坛。一开始，我对人工智能的概念只是一知半解。而且根本分不清什么是智能和自动化。<br><img src="/2017/11/02/未来科技大会/2.jpg" alt="1"><br>在这次论坛中提出了两个我认为比较对我来说比较新颖的论点：<br>1.伪人工智能；<br>2.人工智能的作用。<br>一位演讲者提出了现在的AI方向的工作者做的并不止AI的观点，因为他认为现有的大多数人工智能只实现了自动化或者通过人类手动写入所有相关运行算法实现的人工➕智能并不能像Alphago那样实现深度学习的能力。确实能否学习自我进步才是区分是否智能的标准。<br><img src="/2017/11/02/未来科技大会/3.jpg" alt="2"><br><img src="/2017/11/02/未来科技大会/4.jpg" alt="3"><br>还有一位演讲者摆出了一份属于他的答案，一份关于人工智能究竟应该干什么的答案。他认为真正理想的状态应该是人机结合共同实现工作。我十分认同他的观点。自人工智能的概念出现在我们的视野里，许多人开始讨论、开始担心：以后很多工作将会被人工智能所替代，被替代的人将何去何从？但是，我认为虽然科学的发展不应该受到人文道德的限制，但是技术的发展应该是以人为本的。人工智能的出现是为了使人们生活得更好，不是单纯的为了实现一种新的科学知识而去取代了人的位置。再者试想一下，当服务我们的对象是一个绝对冷静的机器，毫无人情化可言，那这个世界将会变得异常冰冷。只有当人的温暖和人工智能的算法分析有机结合才能使我们生活得更加美好，这才是以人为本技术发展。正如耶稣所言：上帝的归上帝，凯撒的归凯撒。人类主导辅以人工智能才是人工智能的正确发展方向。<br><img src="/2017/11/02/未来科技大会/5.jpg" alt="4"><br>人工智能介入我们的生活是一个不可避免的趋势，与其敬而远之，等待被淘汰。还不如主动过去接触掌握人工智能才能是我们未来的生活更加美好。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1584,7 +1589,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

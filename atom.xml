@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-07T16:31:03.629Z</updated>
+  <updated>2018-04-11T17:23:02.833Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CodeForces - 962D(优先队列)</title>
+    <link href="http://yoursite.com/2018/04/11/CodeForces%20-%20962D(%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97)/"/>
+    <id>http://yoursite.com/2018/04/11/CodeForces - 962D(优先队列)/</id>
+    <published>2018-04-11T15:50:44.000Z</published>
+    <updated>2018-04-11T17:23:02.833Z</updated>
+    
+    <content type="html"><![CDATA[<p>D. Merge Equals<br>time limit per test2 seconds<br>memory limit per test256 megabytes<br>inputstandard input<br>outputstandard output<br>You are given an array of positive integers. While there are at least two equal elements, we will perform the following operation. We choose the smallest value x that occurs in the array 2 or more times. Take the first two occurrences of x in this array (the two leftmost occurrences). Remove the left of these two occurrences, and the right one is replaced by the sum of this two values (that is, 2⋅x).</p><p>Determine how the array will look after described operations are performed.</p><p>For example, consider the given array looks like [3,4,1,2,2,1,1]. It will be changed in the following way: [3,4,1,2,2,1,1] → [3,4,2,2,2,1] → [3,4,4,2,1] → [3,8,2,1].<br>If the given array is look like [1,1,3,1,1] it will be changed in the following way: [1,1,3,1,1] → [2,3,1,1] → [2,3,2] → [3,4].</p><p>Input<br>The first line contains a single integer n (2≤n≤150000) — the number of elements in the array.<br>The second line contains a sequence from n elements a1,a2,…,an  — the elements of the array.</p><p>Output<br>In the first line print an integer k — the number of elements in the array after all the performed operations. In the second line print k integers — the elements of the array after all the performed operations.</p><p>Examples<br>input<br>7<br>3 4 1 2 2 1 1<br>output<br>4<br>3 8 2 1<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">struct node&#123;</div><div class="line">    long long x,now;</div><div class="line">    bool operator &lt; (const node &amp;a)const&#123;</div><div class="line">        <span class="keyword">if</span>(x==a.x)<span class="built_in">return</span> now&gt;a.now;</div><div class="line">        <span class="built_in">return</span> x&gt;a.x;</div><div class="line">    &#125;</div><div class="line">&#125;;</div><div class="line">node c[1000010];</div><div class="line"></div><div class="line">priority_queue&lt;node,vector&lt;node&gt;,less&lt;node&gt; &gt;q;</div><div class="line"></div><div class="line">bool cmp(node x,node y)&#123;<span class="built_in">return</span> x.now&lt;y.now;&#125;</div><div class="line"></div><div class="line">int n,now,x,j=0;</div><div class="line">void <span class="function"><span class="title">work</span></span>()&#123;</div><div class="line">    node a=q.top();q.pop();</div><div class="line">    <span class="keyword">while</span>(!q.empty())&#123;</div><div class="line">        node b=q.top();q.pop();</div><div class="line">        <span class="keyword">if</span>(a.x==b.x)&#123;</div><div class="line">            b.x*=2;q.push(b);</div><div class="line">            a=q.top();q.pop();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            c[j++]=a;</div><div class="line">            a=b;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    c[j++]=a;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    //freopen(<span class="string">"123.in"</span>,<span class="string">"r"</span>,stdin);</div><div class="line">    node a;</div><div class="line">    <span class="keyword">while</span>(~scanf(<span class="string">"%d"</span>,&amp;n))&#123;</div><div class="line">        j=0;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">            cin&gt;&gt;x;</div><div class="line">            a.x=x;</div><div class="line">            a.now=i+1;</div><div class="line">            q.push(a);</div><div class="line">        &#125;</div><div class="line">        work();</div><div class="line">        sort(c,c+j,cmp);</div><div class="line">        cout&lt;&lt;j&lt;&lt;endl;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;j;i++)&#123;</div><div class="line">            cout&lt;&lt; c[i].x &lt;&lt; <span class="string">' '</span>;</div><div class="line">        &#125;</div><div class="line">        cout&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;D. Merge Equals&lt;br&gt;time limit per test2 seconds&lt;br&gt;memory limit per test256 megabytes&lt;br&gt;inputstandard input&lt;br&gt;outputstandard output&lt;br&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
+    
+      <category term="Codeforces" scheme="http://yoursite.com/tags/Codeforces/"/>
+    
+      <category term="C++应用" scheme="http://yoursite.com/tags/C-%E5%BA%94%E7%94%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>蓝桥杯与天梯赛总结</title>

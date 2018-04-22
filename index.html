@@ -254,6 +254,146 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/22/2018宁夏预选赛B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xyr">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="入门级菜鸡的自虐笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/22/2018宁夏预选赛B/" itemprop="url">018宁夏预选赛B（米勒拉宾素数判定算法）</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-22T18:46:25+08:00">
+                2018-04-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Goldbach<br>Description:</p>
+<p>Goldbach’s conjecture is one of the oldest and best-known unsolved problems in number theory and all of mathematics. It states:</p>
+<p>Every even integer greater than 2 can be expressed as the sum of two primes.</p>
+<p>The actual verification of the Goldbach conjecture shows that even numbers below at least 1e14 can be expressed as a sum of two prime numbers. </p>
+<p>Many times, there are more than one way to represent even numbers as two prime numbers. </p>
+<p>For example, 18=5+13=7+11, 64=3+61=5+59=11+53=17+47=23+41, etc.</p>
+<p>Now this problem is asking you to divide a postive even integer n (2&lt; n &lt;2^63) into two prime numbers.</p>
+<p>Although a certain scope of the problem has not been strictly proved the correctness of Goldbach’s conjecture, we still hope that you can solve it. </p>
+<p>If you find that an even number of Goldbach conjectures are not true, then this question will be wrong, but we would like to congratulate you on solving this math problem that has plagued humanity for hundreds of years.</p>
+<p>Input:</p>
+<p>The first line of input is a T means the number of the cases.</p>
+<p>Next T lines, each line is a postive even integer n (2&lt; n &lt;2^63).</p>
+<p>Output:</p>
+<p>The output is also T lines, each line is two number we asked for.</p>
+<p>T is about 100.8</p>
+<p>本题答案不唯一，符合要求的答案均正确</p>
+<p>样例输入<br>1<br>8<br>样例输出<br>3 5</p>
+<p>简单证明:<br>由费马小定理有<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">n是一个奇素数，a是任何整数(1≤ a≤n-1) ，则 a^(n-1)≡1(mod n)。</div></pre></td></tr></table></figure></p>
+<p>易知<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">n是一个奇素数，则方程x^2 ≡ 1 mod n只有±1两个解。</div></pre></td></tr></table></figure></p>
+<p>即有<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">如果n是一个奇素数，将n-1表示成2^s*r的形式(r是奇数)，a是和n互素的任何整数，那么a^r≡1(mod n)或者对某个j(0≤j≤s－1,j∈Z)等式a^(2^j*r)≡－1(mod n)成立。</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;bits/stdc++.h&gt;</span></div><div class="line">using namespace std;</div><div class="line">typedef unsigned long long ll;//爆long long </div><div class="line">const int S=10;</div><div class="line"></div><div class="line">ll mult_mod(ll a,ll b,ll c)&#123;</div><div class="line">    a%=c;</div><div class="line">    b%=c;</div><div class="line">    ll ret=0;</div><div class="line">    ll tmp=a;</div><div class="line">    <span class="keyword">while</span>(b)&#123;</div><div class="line">        <span class="keyword">if</span>(b&amp;1)&#123;</div><div class="line">            ret+=tmp;</div><div class="line">            <span class="keyword">if</span>(ret&gt;c) ret-=c;</div><div class="line">        &#125;</div><div class="line">        tmp&lt;&lt;=1;</div><div class="line">        <span class="keyword">if</span>(tmp&gt;c) tmp-=c;</div><div class="line">        b&gt;&gt;=1;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line">ll pow_mod(ll a,ll n,ll mod)&#123;</div><div class="line">	//直接快速幂会爆long long</div><div class="line">    ll ret=1;</div><div class="line">    ll tmp=a%mod;</div><div class="line">    <span class="keyword">while</span>(n)&#123;</div><div class="line">        <span class="keyword">if</span>(n&amp;1) ret=mult_mod(ret,tmp,mod);</div><div class="line">        tmp=mult_mod(tmp,tmp,mod);</div><div class="line">        n&gt;&gt;=1;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> ret;</div><div class="line">&#125;</div><div class="line">bool check(ll a,ll n,ll x,ll t)&#123;</div><div class="line">    ll ret=pow_mod(a,x,n);</div><div class="line">    ll last=ret;</div><div class="line">    <span class="keyword">for</span>(int i=1;i&lt;=t;i++)&#123;</div><div class="line">        ret=mult_mod(ret,ret,n);</div><div class="line">        <span class="keyword">if</span>(ret==1&amp;&amp;last!=1&amp;&amp;last!=n-1) <span class="built_in">return</span> <span class="literal">true</span>;</div><div class="line">        last=ret;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span>(ret!=1) <span class="built_in">return</span> <span class="literal">true</span>;</div><div class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div><div class="line">bool Miller_Rabin(ll n)&#123;</div><div class="line">    <span class="keyword">if</span>(n&lt;2) <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">    <span class="keyword">if</span>(n==2) <span class="built_in">return</span> <span class="literal">true</span>;</div><div class="line">    <span class="keyword">if</span>((n&amp;1)==0) <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">    ll x=n-1;</div><div class="line">    ll t=0;</div><div class="line">    <span class="keyword">while</span>((x&amp;1)==1)&#123;</div><div class="line">        x&gt;&gt;=1;</div><div class="line">        t++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;S;i++)&#123;</div><div class="line">        ll a=rand()%(n-1)+1;</div><div class="line">        <span class="keyword">if</span>(check(a,n,x,t)) <span class="built_in">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div><div class="line">int main()</div><div class="line">&#123;</div><div class="line">    int t;</div><div class="line">    cin&gt;&gt;t;</div><div class="line">    <span class="keyword">while</span>(t--)&#123;</div><div class="line">        ll n;</div><div class="line">        cin&gt;&gt;n;</div><div class="line">        <span class="keyword">if</span>(n==4||n==6) cout&lt;&lt;n/2&lt;&lt;<span class="string">" "</span>&lt;&lt;n/2&lt;&lt;endl;</div><div class="line">        <span class="keyword">else</span>&#123;</div><div class="line">            <span class="keyword">for</span>(ll i=3;i&lt;=n;i+=2)&#123;</div><div class="line">                <span class="keyword">if</span>(!Miller_Rabin(i)) <span class="built_in">continue</span>;</div><div class="line">                <span class="keyword">if</span>(Miller_Rabin(i)&amp;&amp;Miller_Rabin(n-i))&#123;</div><div class="line">                    cout&lt;&lt;i&lt;&lt;<span class="string">" "</span>&lt;&lt;n-i&lt;&lt;endl;</div><div class="line">                    <span class="built_in">break</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/11/CodeForces - 962D(优先队列)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1410,136 +1550,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/03/数学常识/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xyr">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="入门级菜鸡的自虐笔记">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/03/数学常识/" itemprop="url">数学常识</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-03T22:34:50+08:00">
-                2017-11-03
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>最小公倍数求法：<br> 假设A与B的最小公倍数是X，最大公因数是Y。则有X=A*B/Y；<br> 且一串数字Xn的最小公倍数为X1与X2和最小公倍数和X3的最小公倍数以此类推。</li>
-<li>最大公因数求法：辗转相除法<br> 设两数为a、b(a≥b)，求a和b最大公因数的步骤如下：<br> (1)用a除以b；<br> (2)若a%b！=0，可得a=max（b，a%b），b=min(b，a%b).<pre><code>重复以上步骤直至a%b==0，此时b为最大公因数；
-</code></pre><img src="/2017/11/03/数学常识/辗转相除法.png" alt="1"><br>#2017/11/7更新</li>
-<li>求三角形面积：例题hdu2035<br><img src="/2017/11/03/数学常识/流下了没有技术的眼泪.jpg" alt="流下了没有技术的眼泪"><br> 补充概念叉乘：假如对向量a、b、c满足c=a×b。即有c垂直于a、b所在平面，且|c|=|a|*|b|*sinθ<br><img src="/2017/11/03/数学常识/叉乘视图.jpg" alt="2"><br> 此时又由高中知识可知SΔ=|a|* |b|* sinθ，所以两向量叉乘的结果是一条膜为两向量首尾相接后所围成三角形面积的ab所在平面的法向量。同理可用多个三角形拼接的方式求已知顶点坐标的多边形面积。<br> 叉乘坐标运算：已知i(a,b,c)、j(x,y,z)时，<pre><code>   有i×j=(bz-cy,-(az-cx),ay-bx).
-其中当i、j为平面向量是有c=y=0，此时i×j=(0,az-cx,0)。
-</code></pre>#2017/11/12更新</li>
-<li>错排：<br> 每人对应一个编号，每人只能抽一次，每个编号只有一个。求每一个人抽到自己编号的情况有多少种？（递推公式D(n) = (n-1) [D(n-2) + D(n-1)]）<br> 设：当有x人时有D(n)种情况，此时第一个人有n-1种情况可以选择。假设第一人选的是编号k，此时k有两种情况<pre><code>（1）选择第一个人的编号，相当于剩下的n-2人重新抽取编号，此时情况为D(n-2)；
-（2）不选择第一个人的编号，相当于k以第一个人的编号为自己的编号剩下的n-1人重新抽取编号，此时情况为D(n--1)；
-</code></pre> 综上，对n人有D(n) = (n-1) [D(n-2) + D(n-1)]</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1590,7 +1600,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

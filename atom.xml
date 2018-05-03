@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-23T13:23:39.906Z</updated>
+  <updated>2018-05-03T05:04:43.033Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,44 +17,16 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>My New Post</title>
-    <link href="http://yoursite.com/2018/04/23/My-New-Post/"/>
-    <id>http://yoursite.com/2018/04/23/My-New-Post/</id>
+    <title>因数和（占坑还没写）</title>
+    <link href="http://yoursite.com/2018/04/23/%E5%9B%A0%E6%95%B0%E5%92%8C/"/>
+    <id>http://yoursite.com/2018/04/23/因数和/</id>
     <published>2018-04-23T13:23:39.000Z</published>
-    <updated>2018-04-23T13:23:39.906Z</updated>
+    <updated>2018-05-03T05:04:43.033Z</updated>
     
     <summary type="html">
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>My New Post</title>
-    <link href="http://yoursite.com/2018/04/23/eoj3541%EF%BC%88map+set%EF%BC%89/"/>
-    <id>http://yoursite.com/2018/04/23/eoj3541（map+set）/</id>
-    <published>2018-04-23T13:17:49.000Z</published>
-    <updated>2018-04-23T13:23:31.645Z</updated>
-    
-    <content type="html"><![CDATA[<p>B. 代码查重<br>Time limit per test: 2.0 seconds</p><p>Memory limit: 256 megabytes</p><p>一场 EOJ 月赛中在小迷妹们的合作之下她们 AC 了所有题目。</p><p>拥有 EOJ 管理员权限的 ultmaster 男神理所当然地抄袭了小迷妹们的代码，并修改了部分代码。ultmaster 男神想知道他的代码是否会被查重，若会被查重则输出 Yes 否则输出 No。由于 EOJ 查重系统比较弱智，所以两份代码会被查重的充要条件是，每行代码对应的哈希值都完全同义。</p><p>注：同义关系满足自反性，对称性，但不满足传递性。</p><p>自反性：对于任意  同义于 。<br>对称性：对于任意 ，如果  同义于 ，则  同义于 。<br>传递性：对于任意 ，如果  同义于 ， 同义于 ，则  同义于 。<br>Input<br>第一行三个整数   分别表示小迷妹们的代码行数，ultmaster 代码长度，EOJ 查重系统默认的同义关系个数。</p><p>第二行  个整数  ，表示小迷妹们代码每行的哈希值。</p><p>第三行  个整数  ，表示 ultmaster 代码每行的哈希值。</p><p>接下去  行，每行两个整数  ，表示哈希值为  和 哈希值为  同义。同一对 , 可能重复出现。</p><p>Output<br>输出一行字符串，Yes 或 No 表示 ultmaster 男神的代码是否会被查重。</p><p>Examples<br>input<br>1 1 2<br>1<br>3<br>1 2<br>2 3<br>output<br>No<br>input<br>2 2 1<br>1 1<br>2 2<br>1 2<br>output<br>Yes</p><p>题解有时间再写</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></div><div class="line">using namespace std;</div><div class="line">typedef long long LL;</div><div class="line">const int maxn = 1e6 + 5;</div><div class="line">LL n,t,m,ans,k;</div><div class="line"></div><div class="line">LL A[100010],B[100010],x,y;</div><div class="line">bool flag=1;</div><div class="line"></div><div class="line">vector&lt;int&gt; num;</div><div class="line">map&lt;int,int&gt; ID;</div><div class="line"></div><div class="line"></div><div class="line">int getID(int x)&#123;</div><div class="line">    <span class="keyword">if</span>(ID.find(x)==ID.end())&#123;</div><div class="line">        num.push_back(x);</div><div class="line">        ID[x]=num.size()-1;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> ID[x];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">set</span>&lt;int&gt;hashh[maxn];</div><div class="line"></div><div class="line">void <span class="function"><span class="title">init</span></span>()&#123;</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;maxn;i++)&#123;</div><div class="line">        hashh[i].clear();</div><div class="line">    &#125;</div><div class="line">    num.clear();</div><div class="line">    ID.clear();</div><div class="line">    flag=1;</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">int  <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    //freopen(<span class="string">"123.in"</span>,<span class="string">"r"</span>,stdin);</div><div class="line">    //ios::sync_with_stdio(<span class="literal">false</span>);</div><div class="line">    //eoj关闭同步会WA，不知为什么。</div><div class="line">    <span class="keyword">while</span>(cin&gt;&gt;n&gt;&gt;m&gt;&gt;k)&#123;</div><div class="line">        init();</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">            cin&gt;&gt;A[i];</div><div class="line">            getID(A[i]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;m;i++)&#123;</div><div class="line">            cin&gt;&gt;B[i];</div><div class="line">            getID(B[i]);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;k;i++)&#123;</div><div class="line">            scanf(<span class="string">"%lld%lld"</span>,&amp;x,&amp;y);</div><div class="line">            int a=getID(x);</div><div class="line">            int b=getID(y);</div><div class="line">            hashh[a].insert(b);</div><div class="line">            hashh[b].insert(a);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;min(n,m);i++)&#123;</div><div class="line">            x=getID(A[i]),y=getID(B[i]);</div><div class="line">            <span class="keyword">if</span>(hashh[x].count(y)==0&amp;&amp;x!=y&amp;&amp;hashh[y].count(x)==0)&#123;</div><div class="line">                flag=0;</div><div class="line">                <span class="built_in">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(n != m) flag = 0;</div><div class="line">        <span class="keyword">if</span>(flag)cout&lt;&lt;<span class="string">"Yes"</span>&lt;&lt;endl;</div><div class="line">        <span class="keyword">else</span> cout&lt;&lt;<span class="string">"No"</span>&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;B. 代码查重&lt;br&gt;Time limit per test: 2.0 seconds&lt;/p&gt;
-&lt;p&gt;Memory limit: 256 megabytes&lt;/p&gt;
-&lt;p&gt;一场 EOJ 月赛中在小迷妹们的合作之下她们 AC 了所有题目。&lt;/p&gt;
-&lt;p&gt;拥有 EOJ 管理员权
-      
-    
-    </summary>
-    
-    
-      <category term="ACM" scheme="http://yoursite.com/tags/ACM/"/>
-    
-      <category term="C++应用" scheme="http://yoursite.com/tags/C-%E5%BA%94%E7%94%A8/"/>
     
   </entry>
   

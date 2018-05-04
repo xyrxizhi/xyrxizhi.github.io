@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ACM,数学常识," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="2543250555@qq.com">
+<meta name="description" content="洛谷P2424题目背景Smart最近沉迷于对约数的研究中。 题目描述对于一个数X，函数f(X)表示X所有约数的和。例如：f(6)=1+2+3+6=12。对于一个X，Smart可以很快的算出f(X)。现在的问题是，给定两个正整数X,Y(X&amp;lt;Y)，Smart希望尽快地算出f(X)+f(X+1)+……+f(Y)的值，你能帮助Smart算出这个值吗？ 输入输出格式输入格式：输入文件仅一行，两个正整数">
+<meta name="keywords" content="ACM,数学常识">
 <meta property="og:type" content="article">
-<meta property="og:title" content="因数和（占坑还没写）">
+<meta property="og:title" content="约数和（洛谷P2424）">
 <meta property="og:url" content="http://yoursite.com/2018/04/23/因数和/index.html">
 <meta property="og:site_name" content="入门级菜鸡的自虐笔记">
-<meta property="og:description" content="2543250555@qq.com">
+<meta property="og:description" content="洛谷P2424题目背景Smart最近沉迷于对约数的研究中。 题目描述对于一个数X，函数f(X)表示X所有约数的和。例如：f(6)=1+2+3+6=12。对于一个X，Smart可以很快的算出f(X)。现在的问题是，给定两个正整数X,Y(X&amp;lt;Y)，Smart希望尽快地算出f(X)+f(X+1)+……+f(Y)的值，你能帮助Smart算出这个值吗？ 输入输出格式输入格式：输入文件仅一行，两个正整数">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-03T05:04:43.033Z">
+<meta property="og:updated_time" content="2018-05-04T07:27:02.130Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="因数和（占坑还没写）">
-<meta name="twitter:description" content="2543250555@qq.com">
+<meta name="twitter:title" content="约数和（洛谷P2424）">
+<meta name="twitter:description" content="洛谷P2424题目背景Smart最近沉迷于对约数的研究中。 题目描述对于一个数X，函数f(X)表示X所有约数的和。例如：f(6)=1+2+3+6=12。对于一个X，Smart可以很快的算出f(X)。现在的问题是，给定两个正整数X,Y(X&amp;lt;Y)，Smart希望尽快地算出f(X)+f(X+1)+……+f(Y)的值，你能帮助Smart算出这个值吗？ 输入输出格式输入格式：输入文件仅一行，两个正整数">
 
 
 
@@ -127,7 +128,7 @@
 
 
 
-  <title>因数和（占坑还没写） | 入门级菜鸡的自虐笔记</title>
+  <title>约数和（洛谷P2424） | 入门级菜鸡的自虐笔记</title>
   
 
 
@@ -271,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">因数和（占坑还没写）</h1>
+          <h1 class="post-title" itemprop="name headline">约数和（洛谷P2424）</h1>
         
 
         <div class="post-meta">
@@ -331,7 +332,24 @@
       
 
       
-        
+        <p>洛谷P2424<br>题目背景<br>Smart最近沉迷于对约数的研究中。</p>
+<p>题目描述<br>对于一个数X，函数f(X)表示X所有约数的和。例如：f(6)=1+2+3+6=12。对于一个X，Smart可以很快的算出f(X)。现在的问题是，给定两个正整数X,Y(X&lt;Y)，Smart希望尽快地算出f(X)+f(X+1)+……+f(Y)的值，你能帮助Smart算出这个值吗？</p>
+<p>输入输出格式<br>输入格式：<br>输入文件仅一行，两个正整数X和Y（X&lt;Y），表示需要计算f(X)+f(X+1)+……+f(Y)。</p>
+<p>输出格式：<br>输出只有一行，为f(X)+f(X+1)+……+f(Y)的值。</p>
+<p>输入输出样例<br>输入样例#1：<br>2 4<br>输出样例#1：<br>14<br>输入样例#2：<br>123 321<br>输出样例#2：<br>72543</p>
+<p>把f(x)用数学方式表示一下就是f(x)=∑d|x d</p>
+<p>先假设要求k为1~n的约数和</p>
+<p>最直接的方法是直接枚举然后累加，但这样的时间复杂度是O(∑i=1 n（i^1/2）).</p>
+<p>第二种思路是枚举约数,考虑1−n中有几个数是d的倍数<br>假如1−n中存在d的倍数，那这个数肯定可以表示为k⋅d(k∈N+)且1≤k≤n/d;</p>
+<p>也就是说从1−n中把d,2d,3d…..(n/d)d取出来，<br>易知d的倍数的个数就是(n/d)</p>
+<p>即有k=∑ i=1 n(n/i∗i)<br>这种做法时间复杂度是O(n).</p>
+<p>第三种思路是，我们想尝试把n/i列举出来，<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">以12为例，12,6,4,3,2,2,1,1,1,1,1,1</div></pre></td></tr></table></figure></p>
+<p>发现这里面有些数是重复且连续的<br>考虑能不能把这些重复的一次算出来</p>
+<p>只要我们能够找到每个区间的l，r就很容易可以得到答案；<br>显然l（i）=r（i-1）+1</p>
+<p>l是那个数列的下标，所以 (n/l) 就是约数<br>n/(n/l)就是有多少个x，存在在y取1~n内 做运算 y/x==(n/l)//整除；</p>
+<p>ans+=约数*约数的个数</p>
+<p>约数=n/l<br>约数的个数=(l+r)∗(r−l+1)/2<br>即ans+=(n/l)∗(l+r)∗(r−l+1)/2</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></div><div class="line">using namespace std;</div><div class="line">typedef long long ll;</div><div class="line"></div><div class="line">const ll maxn = 1e6+10;</div><div class="line">const ll mo = 1e9;</div><div class="line">const ll INF = 0x3f3f3f3f;</div><div class="line">ll l,r,ans1,ans2,n,m;</div><div class="line"></div><div class="line">ll work(ll x)&#123;</div><div class="line">    ll ans=0;</div><div class="line">    l=1,r=0;</div><div class="line">    <span class="keyword">while</span>(l&lt;=x)&#123;</div><div class="line">        r=x/(x/l);</div><div class="line">        <span class="keyword">if</span>((l+r)%2)ans+=(r<span class="_">-l</span>+1)/2*(l+r)*(x/l);</div><div class="line">        <span class="keyword">else</span> ans+=(l+r)/2*(r<span class="_">-l</span>+1)*(x/l);</div><div class="line">        l=r+1;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> ans;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int  <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    <span class="keyword">while</span>(cin&gt;&gt;n&gt;&gt;m)&#123;</div><div class="line">        ans1=work(n-1);</div><div class="line">        ans2=work(m);</div><div class="line">        cout&lt;&lt;ans2-ans1&lt;&lt;endl;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -345,6 +363,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ACM/" rel="tag"># ACM</a>
+          
+            <a href="/tags/数学常识/" rel="tag"># 数学常识</a>
+          
+        </div>
       
 
       
@@ -365,8 +391,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/02/Xidian oj 1131 A Fib Sequences(lower_bound应用)/" rel="prev" title="Xidian_oj_1131:A_Fib_Sequences(lower_bound应用)">
-                Xidian_oj_1131:A_Fib_Sequences(lower_bound应用) <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/23/约数和/" rel="prev" title="因数和（占坑还没写）">
+                因数和（占坑还没写） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -442,7 +468,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

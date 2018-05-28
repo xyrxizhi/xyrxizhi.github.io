@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="C. Chessboardtime limit per test1 secondmemory limit per test256 megabytesinputstandard inputoutputstandard outputMagnus decided to play a classic chess game. Though what he saw in his locker shocked">
+<meta name="description" content="C - Coprimes Gym - 101492C  A. Tuttu (a distant relative of W. Tutte) is a young mathematician with a promising future. As a child, he was very lonely, since he had no siblings nor cousins. One of his">
 <meta name="keywords" content="ACM,Codeforces,C++应用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Educational Codeforces Round 41 C">
-<meta property="og:url" content="http://yoursite.com/2018/04/05/Educational Codeforces Round 41 C/index.html">
+<meta property="og:title" content="Gym-101492C(\_Find_first()的应用)">
+<meta property="og:url" content="http://yoursite.com/2018/05/28/Gym - 101492C（_Find_first()的应用）/index.html">
 <meta property="og:site_name" content="入门级菜鸡的自虐笔记">
-<meta property="og:description" content="C. Chessboardtime limit per test1 secondmemory limit per test256 megabytesinputstandard inputoutputstandard outputMagnus decided to play a classic chess game. Though what he saw in his locker shocked">
+<meta property="og:description" content="C - Coprimes Gym - 101492C  A. Tuttu (a distant relative of W. Tutte) is a young mathematician with a promising future. As a child, he was very lonely, since he had no siblings nor cousins. One of his">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-06T17:43:44.966Z">
+<meta property="og:updated_time" content="2018-05-28T05:54:02.361Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Educational Codeforces Round 41 C">
-<meta name="twitter:description" content="C. Chessboardtime limit per test1 secondmemory limit per test256 megabytesinputstandard inputoutputstandard outputMagnus decided to play a classic chess game. Though what he saw in his locker shocked">
+<meta name="twitter:title" content="Gym-101492C(\_Find_first()的应用)">
+<meta name="twitter:description" content="C - Coprimes Gym - 101492C  A. Tuttu (a distant relative of W. Tutte) is a young mathematician with a promising future. As a child, he was very lonely, since he had no siblings nor cousins. One of his">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/05/Educational Codeforces Round 41 C/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/28/Gym - 101492C（_Find_first()的应用）/"/>
 
 
 
 
 
-  <title>Educational Codeforces Round 41 C | 入门级菜鸡的自虐笔记</title>
+  <title>Gym-101492C(\_Find_first()的应用) | 入门级菜鸡的自虐笔记</title>
   
 
 
@@ -255,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/05/Educational Codeforces Round 41 C/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/Gym - 101492C（_Find_first()的应用）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xyr">
@@ -272,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Educational Codeforces Round 41 C</h1>
+          <h1 class="post-title" itemprop="name headline">Gym-101492C(\_Find_first()的应用)</h1>
         
 
         <div class="post-meta">
@@ -284,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-05T01:10:10+08:00">
-                2018-04-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T13:33:14+08:00">
+                2018-05-28
               </time>
             
 
@@ -303,8 +303,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/05/Educational Codeforces Round 41 C/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/04/05/Educational Codeforces Round 41 C/" itemprop="commentsCount"></span>
+                <a href="/2018/05/28/Gym - 101492C（_Find_first()的应用）/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/28/Gym - 101492C（_Find_first()的应用）/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -332,20 +332,14 @@
       
 
       
-        <p>C. Chessboard<br>time limit per test1 second<br>memory limit per test256 megabytes<br>inputstandard input<br>outputstandard output<br>Magnus decided to play a classic chess game. Though what he saw in his locker shocked him! His favourite chessboard got broken into 4 pieces, each of size n by n, n is always odd. And what’s even worse, some squares were of wrong color. j-th square of the i-th row of k-th piece of the board has color ak, i, j; 1 being black and 0 being white.</p>
-<p>Now Magnus wants to change color of some squares in such a way that he recolors minimum number of squares and obtained pieces form a valid chessboard. Every square has its color different to each of the neightbouring by side squares in a valid board. Its size should be 2n by 2n. You are allowed to move pieces but not allowed to rotate or flip them.</p>
-<p>Input<br>The first line contains odd integer n (1 ≤ n ≤ 100) — the size of all pieces of the board.</p>
-<p>Then 4 segments follow, each describes one piece of the board. Each consists of n lines of n characters; j-th one of i-th line is equal to 1 if the square is black initially and 0 otherwise. Segments are separated by an empty line.</p>
-<p>Output<br>Print one number — minimum number of squares Magnus should recolor to be able to obtain a valid chessboard.<br>Examples<br>input<br>1<br>0</p>
-<p>0</p>
-<p>1</p>
-<p>0<br>output<br>1<br>input<br>3<br>101<br>010<br>101</p>
-<p>101<br>000<br>101</p>
-<p>010<br>101<br>011</p>
-<p>010<br>101<br>010<br>output<br>2<br>题意很简单，有4块n*n棋盘。其中有些棋盘的配色不标准，问至少需要重新染色多少块才能使它们组成成一块完整的2n*2n的棋盘。（n为奇数）</p>
-<p>数据不算大，很容易想到这种暴力模拟的思路，但是当时做的时候没想到如何把每种排列情况全列出来。赛后看榜单上的代码才知道了有一个叫next_permutation()的全排列函数。<br>            next_permutation()会取得[first,last)所标示之序列的下一个排列组合，如果没有下一个排列组合，便返回false;否则返回true。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></div><div class="line"></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">const int INF = 0x3f3f3f3f;</div><div class="line"></div><div class="line">char <span class="keyword">in</span>[4][105][105];</div><div class="line">char cur[205][205];</div><div class="line"></div><div class="line">int now[4];</div><div class="line">int <span class="function"><span class="title">main</span></span>() &#123;</div><div class="line">	int n,minn=1e9,ans;</div><div class="line">	char ch;</div><div class="line">	scanf(<span class="string">"%d"</span>, &amp;n);</div><div class="line"></div><div class="line">	<span class="keyword">for</span>(int i=0;i&lt;4;i++)</div><div class="line">        <span class="keyword">for</span> (int j=0;j&lt;n;j++)</div><div class="line">            scanf(<span class="string">"%s"</span>,<span class="keyword">in</span>[i][j]);</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (int i=0;i&lt;4;i++)now[i]=i;</div><div class="line"></div><div class="line">    <span class="keyword">do</span>&#123;</div><div class="line">        ans=0;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;4;i++)&#123;</div><div class="line">            <span class="keyword">for</span>(int j=0;j&lt;n;j++)&#123;</div><div class="line">                <span class="keyword">for</span>(int k=0;k&lt;n;k++)&#123;</div><div class="line">                    cur[(i/2)*n+j][(i%2)*n+k]=<span class="keyword">in</span>[now[i]][j][k];//拼成新的棋盘</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;2*n;i++)&#123;</div><div class="line">            <span class="keyword">for</span>(int j=0;j&lt;2*n;j++)&#123;</div><div class="line">                <span class="keyword">if</span>((i+j)%2)ch=<span class="string">'0'</span>;//黑白相间的棋盘颜色</div><div class="line">                <span class="keyword">else</span> ch=<span class="string">'1'</span>;</div><div class="line">                <span class="keyword">if</span>(ch!=cur[i][j])ans++;//每种情况需要颜色次数</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        minn=min(minn,ans);</div><div class="line"></div><div class="line">    &#125;<span class="keyword">while</span>(next_permutation(now,now+4));//把棋盘摆放顺序全排列，遍历所有摆放情况。</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,minn);</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+        <p>C - Coprimes Gym - 101492C </p>
+<p>A. Tuttu (a distant relative of W. Tutte) is a young mathematician with a promising future. As a child, he was very lonely, since he had no siblings nor cousins. One of his earliest Christmas gifts was a Number Theory book. That is the reason he focused on studying this area since a very early age. He was very interested in coprimes, but he could not solve the following problem and he asked you to help him.</p>
+<p>Given a sequence of N positive integers, we want to answer M queries. Each query is represented by two indices. He would like to know if there exists a pair of relatively prime numbers in the sequence whose positions are between the given indices.</p>
+<p>input<br>The first line has the numbers N and M separated by a space. The second line contains N positive integers a1, a2, …, aN separated by a space. Then there are M lines, each one containing two integers,  and r, separated by a space, encoding a query.</p>
+<p>2 ≤ N ≤ 5·104<br>1 ≤ M ≤ 2·105<br>1 ≤ ai ≤ 5·105, 1 ≤ i ≤ N<br>1 ≤ l ≤ r ≤ N</p>
+<p>output<br>For each one of the queries you should print “S” (without the double quotes) if there is a pair of relatively prime integers between (including) the sequence positions indexed by  and r, or “N” otherwise.</p>
+<p>区间内找是否有两个数互质，即找两个没有相同质因数的数。<br>记录位置i右边第一个与它互质的数的位置。（bitset+_Find_first()）<br>再通过dp实现找到i位置右边第一对符合提议的数的右边的数的位置。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></div><div class="line">using namespace std;</div><div class="line">typedef long long ll;</div><div class="line">bitset&lt;50050&gt;pos[50050],mark,now;</div><div class="line">ll n,m,x,dp[50050],a[50050],prime[500050],num[500050],tot=0;</div><div class="line">bool vis[500050];</div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    std::ios::sync_with_stdio(0);</div><div class="line">    fill(vis,vis+sizeof(vis),1);</div><div class="line">    vis[0]=vis[1]=0;</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;=500000;i++)&#123;</div><div class="line"></div><div class="line">        <span class="keyword">if</span>(vis[i])&#123;</div><div class="line">            prime[tot++]=i;</div><div class="line">            <span class="keyword">for</span>(int j=i;j&lt;=500000;j+=i)&#123;</div><div class="line">                vis[j]=0;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;tot;i++)&#123;</div><div class="line">        num[prime[i]]=i;</div><div class="line">    &#125;</div><div class="line">    cin&gt;&gt;n&gt;&gt;m;</div><div class="line">    <span class="keyword">for</span>(int i=1;i&lt;=n;i++)&#123;</div><div class="line">        cin&gt;&gt;a[i];</div><div class="line">    &#125;</div><div class="line">    dp[n+1]=50050;</div><div class="line">    <span class="keyword">for</span>(int i=n;i&gt;0;i--)&#123;</div><div class="line">        x=a[i];</div><div class="line">        mark[i]=1;//每次把当前位置的右边全部标记</div><div class="line">        now.reset();</div><div class="line">        <span class="keyword">for</span>(int j=0;prime[j]*prime[j]&lt;=x;j++)&#123;</div><div class="line">            <span class="keyword">if</span>(x%prime[j]==0)&#123;</div><div class="line">                pos[num[prime[j]]][i]=1;//标记能被该质因数分解的数字的位置</div><div class="line">                now|=pos[num[prime[j]]];</div><div class="line">                /*记录右边全部被这个质因数分解数字的位置</div><div class="line">                记录后为零的位置就是该数字右边与其互质的数*/</div><div class="line">                <span class="keyword">while</span>(x%prime[j]==0)x/=prime[j];</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(x!=1)&#123;pos[num[x]][i]=1;now|=pos[num[x]];&#125;</div><div class="line">        ll k=(mark^now)._Find_first();</div><div class="line">        /*mark右边全为1，与now亦或后。互质的数位置标记变为1，其他为0</div><div class="line">        Bitset._Fing_first()作用是找到第一个为1的位置。</div><div class="line">        即当前位置右边第一个与其互质的数的位置*/</div><div class="line">        dp[i]=min(dp[i+1],k);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span>(m--)&#123;</div><div class="line">        int l,r;</div><div class="line">        cin&gt;&gt;l&gt;&gt;r;</div><div class="line">        <span class="keyword">if</span>(dp[l]&lt;=r)puts(<span class="string">"S"</span>);</div><div class="line">        <span class="keyword">else</span> puts(<span class="string">"N"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
     
@@ -379,8 +373,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/30/Gym-101755C/" rel="next" title="Gym - 101755C">
-                <i class="fa fa-chevron-left"></i> Gym - 101755C
+              <a href="/2018/05/02/Xidian oj 1131 A Fib Sequences(lower_bound应用)/" rel="next" title="Xidian_oj_1131:A_Fib_Sequences(lower_bound应用)">
+                <i class="fa fa-chevron-left"></i> Xidian_oj_1131:A_Fib_Sequences(lower_bound应用)
               </a>
             
           </div>
@@ -388,10 +382,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/07/HDU-6085(bitset)/" rel="prev" title="A - Rikka with Candies HDU - 6085（bitset应用）">
-                A - Rikka with Candies HDU - 6085（bitset应用） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

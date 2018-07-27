@@ -68,10 +68,12 @@
 
 
 
-  <meta name="keywords" content="ACM,Codeforces,C++应用," />
+  <meta name="keywords" content="ACM,C++应用,牛客网," />
 
 
 
+
+  
 
 
   <link rel="alternate" href="/atom.xml" title="入门级菜鸡的自虐笔记" type="application/atom+xml" />
@@ -81,18 +83,18 @@
 
 
 
-<meta name="description" content="As we know, Rikka is poor at math. Yuta is worrying about this situation, so he gives Rikka some math tasks to practice. There is one of them:  There are n children and m kinds of candies. The ith chi">
-<meta name="keywords" content="ACM,Codeforces,C++应用">
+<meta name="description" content="前言： 昨天打牛客网遇到一题需要块状链表的题目，但是自己没想到具体怎么实现。没想到这题被另一个队的同学同C++库里面的rope轻松秒掉了。 题目在这里https://www.nowcoder.com/acm/contest/141/C 大概题意是给你一个1~n的串，m个操作。每次操作把从第x个位置开始y个元素抽出来放到前面。问m个操作后的串的状态。 这很明显是一道可持久化平衡树的应用题 12345">
+<meta name="keywords" content="ACM,C++应用,牛客网">
 <meta property="og:type" content="article">
-<meta property="og:title" content="A - Rikka with Candies HDU - 6085（bitset应用）">
-<meta property="og:url" content="http://yoursite.com/2018/04/07/HDU-6085(bitset)/index.html">
+<meta property="og:title" content="rope的简单应用">
+<meta property="og:url" content="http://yoursite.com/2018/07/27/rope的简单应用/index.html">
 <meta property="og:site_name" content="入门级菜鸡的自虐笔记">
-<meta property="og:description" content="As we know, Rikka is poor at math. Yuta is worrying about this situation, so he gives Rikka some math tasks to practice. There is one of them:  There are n children and m kinds of candies. The ith chi">
+<meta property="og:description" content="前言： 昨天打牛客网遇到一题需要块状链表的题目，但是自己没想到具体怎么实现。没想到这题被另一个队的同学同C++库里面的rope轻松秒掉了。 题目在这里https://www.nowcoder.com/acm/contest/141/C 大概题意是给你一个1~n的串，m个操作。每次操作把从第x个位置开始y个元素抽出来放到前面。问m个操作后的串的状态。 这很明显是一道可持久化平衡树的应用题 12345">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-13T10:23:05.928Z">
+<meta property="og:updated_time" content="2018-07-27T07:13:08.695Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="A - Rikka with Candies HDU - 6085（bitset应用）">
-<meta name="twitter:description" content="As we know, Rikka is poor at math. Yuta is worrying about this situation, so he gives Rikka some math tasks to practice. There is one of them:  There are n children and m kinds of candies. The ith chi">
+<meta name="twitter:title" content="rope的简单应用">
+<meta name="twitter:description" content="前言： 昨天打牛客网遇到一题需要块状链表的题目，但是自己没想到具体怎么实现。没想到这题被另一个队的同学同C++库里面的rope轻松秒掉了。 题目在这里https://www.nowcoder.com/acm/contest/141/C 大概题意是给你一个1~n的串，m个操作。每次操作把从第x个位置开始y个元素抽出来放到前面。问m个操作后的串的状态。 这很明显是一道可持久化平衡树的应用题 12345">
 
 
 
@@ -122,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/07/HDU-6085(bitset)/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/27/rope的简单应用/"/>
 
 
 
 
 
-  <title>A - Rikka with Candies HDU - 6085（bitset应用） | 入门级菜鸡的自虐笔记</title>
+  <title>rope的简单应用 | 入门级菜鸡的自虐笔记</title>
   
 
 
@@ -255,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/07/HDU-6085(bitset)/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/27/rope的简单应用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xyr">
@@ -272,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">A - Rikka with Candies HDU - 6085（bitset应用）</h1>
+          <h1 class="post-title" itemprop="name headline">rope的简单应用</h1>
         
 
         <div class="post-meta">
@@ -284,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-07T01:40:17+08:00">
-                2018-04-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-27T14:49:52+08:00">
+                2018-07-27
               </time>
             
 
@@ -303,8 +305,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/04/07/HDU-6085(bitset)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/04/07/HDU-6085(bitset)/" itemprop="commentsCount"></span>
+                <a href="/2018/07/27/rope的简单应用/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/07/27/rope的简单应用/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -332,21 +334,13 @@
       
 
       
-        <p>As we know, Rikka is poor at math. Yuta is worrying about this situation, so he gives Rikka some math tasks to practice. There is one of them: </p>
-<p>There are n children and m kinds of candies. The ith child has Ai dollars and the unit price of the ith kind of candy is Bi. The amount of each kind is infinity. </p>
-<p>Each child has his favorite candy, so he will buy this kind of candies as much as possible and will not buy any candies of other kinds. For example, if this child has 10 dollars and the unit price of his favorite candy is 4 dollars, then he will buy two candies and go home with 2 dollars left. </p>
-<p>Now Yuta has q queries, each of them gives a number k. For each query, Yuta wants to know the number of the pairs (i,j)(1≤i≤n,1≤j≤m) which satisfies if the ith child’s favorite candy is the jth kind, he will take k dollars home. </p>
-<p>To reduce the difficulty, Rikka just need to calculate the answer modulo 2. </p>
-<p>But It is still too difficult for Rikka. Can you help her?<br>Input<br>The first line contains a number t(1≤t≤5), the number of the testcases. </p>
-<p>For each testcase, the first line contains three numbers n,m,q(1≤n,m,q≤50000). </p>
-<p>The second line contains n numbers Ai(1≤Ai≤50000) and the third line contains m numbers Bi(1≤Bi≤50000). </p>
-<p>Then the fourth line contains q numbers ki(0≤ki&lt;MAXBi) , which describes the queries.</p>
-<p>It is guaranteed that Ai≠Aj,Bi≠Bj for all i≠j.<br>Output<br>For each query, print a single line with a single 01 digit – the answer.<br>Sample Input<br>1<br>5 5 5<br>1 2 3 4 5<br>1 2 3 4 5<br>0 1 2 3 4<br>Sample Output<br>0<br>0<br>0<br>0<br>1</p>
-<p>题意是给出数组a，b。每次询问输入k。求任意i，j有ai%bj=k的数量。</p>
-<p>ai%bj=k  =&gt;  ai-k=bj*x<br>所以我们只用统计相应bj与x使等式成立的对数就行了。<br>但是，在我们遍历bi与x的时候，我们应该什么时候记录相应的对数呢？<br>显然ai%bj=k时有看k &lt; bj；<br>所以k &gt;= bj的情况是不会影响相应k的结果的，所以我们可以把b由大到小遍历。<br>直至k &gt;= bj时记录下相应k的对数。</p>
-<p>在这题里，我们应用了bitset类型以便于统计对数以及ai-k的操作。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;cstdio&gt;</span></div><div class="line"><span class="comment">#include&lt;cstdlib&gt;</span></div><div class="line"><span class="comment">#include&lt;cstring&gt;</span></div><div class="line"><span class="comment">#include&lt;iostream&gt;</span></div><div class="line"><span class="comment">#include&lt;cmath&gt;</span></div><div class="line"><span class="comment">#include&lt;string&gt;</span></div><div class="line"><span class="comment">#include &lt;bits/stdc++.h&gt;</span></div><div class="line">using namespace std;</div><div class="line">const int N =50000+5;</div><div class="line">bitset&lt;N&gt;a,b,ans,bx;</div><div class="line">int cnt;</div><div class="line">void <span class="function"><span class="title">init</span></span>()&#123;</div><div class="line">    a.reset(),b.reset();</div><div class="line">    ans.reset(),bx.reset();</div><div class="line">&#125;</div><div class="line">void work(int x)&#123;</div><div class="line">    <span class="keyword">for</span>(int i=x;i&gt;=0;i--)&#123;</div><div class="line">        ans[i]=((a&gt;&gt;i)&amp;bx).count()&amp;1;//a&gt;&gt;i相当于每个ai和k=i的情况。</div><div class="line">        <span class="keyword">if</span>(!b[i])<span class="built_in">continue</span>;</div><div class="line">        <span class="keyword">for</span>(int j=0;j&lt;N;j+=i)&#123;</div><div class="line">            bx.flip(j);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    int maxb=0,t,n,m,q,x;</div><div class="line">    scanf(<span class="string">"%d"</span>,&amp;t);</div><div class="line">    <span class="keyword">while</span>(t--)&#123;</div><div class="line">        init();</div><div class="line">        maxb=0;</div><div class="line">        scanf(<span class="string">"%d%d%d"</span>,&amp;n,&amp;m,&amp;q);</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">            scanf(<span class="string">"%d"</span>,&amp;x);</div><div class="line">            a.set(x);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;m;i++)&#123;</div><div class="line">            scanf(<span class="string">"%d"</span>,&amp;x);</div><div class="line">            b.set(x);</div><div class="line">            maxb=max(maxb,x);</div><div class="line">        &#125;</div><div class="line">        work(maxb);</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;q;i++)&#123;</div><div class="line">            scanf(<span class="string">"%d"</span>,&amp;x);</div><div class="line">            <span class="keyword">if</span>(ans[x])puts(<span class="string">"1"</span>);</div><div class="line">            //这题卡cout。。。醉了，本来cout也能过的</div><div class="line">            //上面加了一行注释就tle了</div><div class="line">            <span class="keyword">else</span> puts(<span class="string">"0"</span>);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">对于一个叫做foo的bitset：</div><div class="line">foo.size() 返回大小（位数）</div><div class="line">foo.count() 返回1的个数</div><div class="line">foo.any() 返回是否有1</div><div class="line">foo.none() 返回是否没有1</div><div class="line">foo.set() 全都变成1</div><div class="line">foo.set(p) 将第p + 1位变成1</div><div class="line">foo.set(p, x) 将第p + 1位变成x</div><div class="line">foo.reset() 全都变成0</div><div class="line">foo.reset(p) 将第p + 1位变成0</div><div class="line">foo.flip() 全都取反</div><div class="line">foo.flip(p) 将第p + 1位取反</div><div class="line">foo.to_ulong() 返回它转换为unsigned long的结果，如果超出范围则报错</div><div class="line">foo.to_ullong() 返回它转换为unsigned long long的结果，如果超出范围则报错</div><div class="line">foo.to_string() 返回它转换为string的结果</div></pre></td></tr></table></figure>
+        <p>前言： 昨天打牛客网遇到一题需要块状链表的题目，但是自己没想到具体怎么实现。没想到这题被另一个队的同学同C++库里面的rope轻松秒掉了。</p>
+<p>题目在这里<a href="https://www.nowcoder.com/acm/contest/141/C" target="_blank" rel="external">https://www.nowcoder.com/acm/contest/141/C</a></p>
+<p>大概题意是给你一个1~n的串，m个操作。每次操作把从第x个位置开始y个元素抽出来放到前面。问m个操作后的串的状态。</p>
+<p>这很明显是一道可持久化平衡树的应用题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></div><div class="line"><span class="comment">#include &lt;ext/rope&gt;</span></div><div class="line">using namespace std;</div><div class="line">using namespace __gnu_cxx;</div><div class="line">rope &lt;int&gt;ans,now;</div><div class="line">int n,m,l,x;</div><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    <span class="keyword">while</span>(~scanf(<span class="string">"%d%d"</span>,&amp;n,&amp;m))&#123;</div><div class="line">        ans.clear();</div><div class="line">        <span class="keyword">for</span>(int i=1;i&lt;=n;i++)&#123;</div><div class="line">            ans.push_back(i);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">while</span>(m--)&#123;</div><div class="line">            scanf(<span class="string">"%d%d"</span>,&amp;l,&amp;x);</div><div class="line">            now=ans.substr(l-1,x);</div><div class="line">            ans.erase(l-1,x);</div><div class="line">            ans.insert(0,now);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span>(int i=0;i&lt;n-1;i++)&#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"%d "</span>,ans[i]);</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans[n-1]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">应用rope需要用到</div><div class="line">	//using namespace __gnu_cxx;和<span class="comment">#include &lt;ext/rope&gt;</span></div><div class="line">rope有以下基本方法</div><div class="line">rope&lt;now&gt; <span class="built_in">test</span>,temp;</div><div class="line">int pos,len;node num;</div><div class="line"></div><div class="line">test.push_back(num);//在末尾添加</div><div class="line"></div><div class="line">test.insert(pos,num);//在位置pos插入　</div><div class="line">test.insert(pos,temp);　</div><div class="line"></div><div class="line"></div><div class="line">test.erase(pos,len);//从pos开始删除len个</div><div class="line"></div><div class="line"></div><div class="line">test.copy(pos,len,temp);//从pos开始到pos+len为止用x代替</div><div class="line"></div><div class="line">test.replace(pos,temp);//把第pos个位置除去并插入temp</div><div class="line"></div><div class="line">test.substr(pos,len);//提取pos开始len个</div><div class="line"></div><div class="line">test.at(i)/[i];//访问第i个元素</div></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -365,9 +359,9 @@
           
             <a href="/tags/ACM/" rel="tag"># ACM</a>
           
-            <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
-          
             <a href="/tags/C-应用/" rel="tag"># C++应用</a>
+          
+            <a href="/tags/牛客网/" rel="tag"># 牛客网</a>
           
         </div>
       
@@ -380,8 +374,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/05/Educational Codeforces Round 41 C/" rel="next" title="Educational Codeforces Round 41 C">
-                <i class="fa fa-chevron-left"></i> Educational Codeforces Round 41 C
+              <a href="/2018/05/28/Gym - 101492C（_Find_first()的应用）/" rel="next" title="Gym-101492C(_Find_first()的应用)">
+                <i class="fa fa-chevron-left"></i> Gym-101492C(_Find_first()的应用)
               </a>
             
           </div>
@@ -389,10 +383,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/07/蓝桥杯与天梯赛总结/" rel="prev" title="蓝桥杯与天梯赛总结">
-                蓝桥杯与天梯赛总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

@@ -254,6 +254,132 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/30/Gym-101755C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xyr">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="入门级菜鸡的自虐笔记">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/30/Gym-101755C/" itemprop="url">Gym - 101755C</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-30T21:31:23+08:00">
+                2018-03-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Problem C. Third-Party Software</p>
+<p>Time limit: 2 seconds<br>Memory limit: 256 megabytes<br>Pavel is developing a game. To do that, he needs functions available in a third-party library too famous to be called. It is known that the function i first appeared in version ai and existed until version bi , and starting from the version bi + 1, it is absent in this library.<br>The library is not free and Pavel needs all the functions. Which minimal number of versions he need to purchase to be able to use all the functions?</p>
+<p>Input<br>The first line contains a single integer n (1 ≤ n ≤ 200000) — the number of the functions.<br>Each of the next n lines contains two integers ai and bi (1 ≤ ai ≤ bi ≤ 109<br>) — the interval of library<br>versions where function i was available.</p>
+<p>Output<br>In the first line output a single integer k — the minimal number of library versions need to be purchased<br>to unlock all functions.<br>In the second line output k distinct integers — the numbers of versions need to be purchased.<br>If there are several possible answers, output any of them.</p>
+<p>Example<br>standard input<br>5<br>2 4<br>1 3<br>2 3<br>3 6<br>4 5<br>standard output<br>2<br>3 4</p>
+<p>题意很简单，就是一种东西有很多个版本和很多个功能。但是每个功能仅存在于连续的几个版本中。<br>现在给出n个功能的存在情况，问至少要买那几个版本才能实现所有功能。</p>
+<p>先按照各个功能的r从小到大排序，同时把l作为第二标准从小到大排序。这样买版本r就可以买到尽可能多的功能。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;bits/stdc++.h&gt;</span></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">struct U&#123;</div><div class="line">    int l,r;</div><div class="line">    bool operator &lt; (const U&amp;x)const&#123;</div><div class="line">        <span class="keyword">if</span>(r==x.r)<span class="built_in">return</span> l&lt;x.l;</div><div class="line">        <span class="built_in">return</span> r&lt;x.r;</div><div class="line">    &#125;</div><div class="line">&#125;a[200020];</div><div class="line">vector &lt;int&gt; ans;</div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>()&#123;</div><div class="line">    int n;</div><div class="line">    scanf(<span class="string">"%d"</span>,&amp;n);</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">        scanf(<span class="string">"%d%d"</span>,&amp;a[i].l,&amp;a[i].r);</div><div class="line">    &#125;</div><div class="line">    int maxx=-1;</div><div class="line">    sort(a,a+n);</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;n;i++)&#123;</div><div class="line">        <span class="keyword">if</span>(a[i].l&gt;maxx)&#123;</div><div class="line">        	/*排序后有，若li&gt;购买到的r的最大值。证明已购买的版本不能覆盖功能i。所以购买i并更新最大值*/</div><div class="line">            ans.push_back(a[i].r);</div><div class="line">            maxx=max(maxx,a[i].r);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans.size());</div><div class="line">    <span class="keyword">for</span>(int i=0;i&lt;ans.size();i++)&#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"%d "</span>,ans[i]);</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/23/python入门笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1448,7 +1574,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">20</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1461,7 +1587,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
